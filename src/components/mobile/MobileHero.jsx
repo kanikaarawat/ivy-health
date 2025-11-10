@@ -82,7 +82,7 @@ export default function MobileHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl font-bold mb-4 leading-tight"
+            className="text-4xl font-bold mb-4 leading-tight bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent"
           >
             {hero.title}
           </motion.h1>
