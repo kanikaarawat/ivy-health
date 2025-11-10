@@ -1,13 +1,15 @@
 // src/components/mobile/MobileProductShowcase.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight, Eye } from 'lucide-react';
 import { content } from '../../content/data';
+import QuickViewModal from './QuickViewModal';
 
 export default function MobileProductShowcase() {
   const { topSellers } = content.homePage;
   const { products } = content.productData;
+  const [quickViewProduct, setQuickViewProduct] = useState(null);
 
   const topSellerProducts = topSellers.map(id => ({
     id,
@@ -33,17 +35,14 @@ export default function MobileProductShowcase() {
       {/* Product Grid */}
       <div className="grid grid-cols-2 gap-3">
         {topSellerProducts.map((product, index) => (
-          <Link
-            key={product.id}
-            to={`/product/${product.id}`}
-            className="group"
-          >
+          <div key={product.id} className="relative group">
+            <Link to={`/product/${product.id}`}>
               <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200 active:scale-[0.98] transition-transform shadow-md"
-            >
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-white rounded-2xl overflow-hidden border border-slate-200 active:scale-[0.98] transition-transform shadow-md"
+              >
               {/* Image */}
               <div className="relative aspect-square bg-slate-100 overflow-hidden">
                 <img
@@ -74,12 +73,35 @@ export default function MobileProductShowcase() {
                     ))}
                   </div>
                   <span className="text-[10px] text-slate-500 font-medium">In Stock</span>
+                  </div>
                 </div>
-              </div>
-            </motion.div>
-          </Link>
+              </motion.div>
+            </Link>
+
+            {/* Quick View Button */}
+            <motion.button
+              onClick={(e) => {
+                e.preventDefault();
+                setQuickViewProduct({ id: product.id, ...product });
+              }}
+              className="absolute bottom-3 right-3 w-9 h-9 bg-slate-900 rounded-xl flex items-center justify-center shadow-lg opacity-0 group-active:opacity-100 transition-opacity z-10"
+              whileTap={{ scale: 0.9 }}
+            >
+              <Eye className="w-4 h-4 text-white" />
+            </motion.button>
+          </div>
         ))}
       </div>
+
+      {/* Quick View Modal */}
+      {quickViewProduct && (
+        <QuickViewModal
+          product={quickViewProduct}
+          productId={quickViewProduct.id}
+          isOpen={!!quickViewProduct}
+          onClose={() => setQuickViewProduct(null)}
+        />
+      )}
     </section>
   );
 }

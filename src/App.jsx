@@ -3,12 +3,17 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import ToastProvider from './components/common/ToastProvider';
+import ContactButtons from './components/common/ContactButtons';
 
 // Layout Components
 import Navbar from './components/global/Navbar';
 import MegaFooter from './components/global/MegaFooter';
 import BottomNavigation from './components/mobile/BottomNavigation';
-import MobileHeader from './components/mobile/MobileHeader';
+import EnhancedMobileHeader from './components/mobile/EnhancedMobileHeader';
+import LiveChatWidget from './components/desktop/LiveChatWidget';
+import ComparisonTool from './components/desktop/ComparisonTool';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -21,6 +26,7 @@ import CategoryPage from './pages/CategoryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import LegalPage from './pages/LegalPage';
 import NotFoundPage from './pages/NotFoundPage';
+import CartPage from './pages/CartPage';
 
 // Scroll to top on route change
 function ScrollToTop() {
@@ -36,13 +42,15 @@ function ScrollToTop() {
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="min-h-screen flex flex-col">
-        {/* Desktop Navbar */}
-        <Navbar />
-        
-        {/* Mobile Header */}
-        <MobileHeader />
+      <CartProvider>
+        <ToastProvider />
+        <ScrollToTop />
+        <div className="min-h-screen flex flex-col">
+          {/* Desktop Navbar */}
+          <Navbar />
+          
+          {/* Mobile Header */}
+          <EnhancedMobileHeader />
         
         <main className="flex-grow pb-20 lg:pb-0">
           <Routes>
@@ -54,6 +62,7 @@ function App() {
             <Route path="/shop" element={<ShopLandingPage />} />
             <Route path="/shop/:categorySlug" element={<CategoryPage />} />
             <Route path="/product/:productId" element={<ProductDetailPage />} />
+            <Route path="/cart" element={<CartPage />} />
             <Route path="/legal/:pageSlug" element={<LegalPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
@@ -64,9 +73,15 @@ function App() {
           <MegaFooter />
         </div>
         
-        {/* Mobile-Only Components */}
-        <BottomNavigation />
-      </div>
+          {/* Mobile-Only Components */}
+          <BottomNavigation />
+          <ContactButtons variant="floating" />
+          
+          {/* Desktop-Only Components */}
+          <LiveChatWidget />
+          <ComparisonTool />
+        </div>
+      </CartProvider>
     </Router>
   );
 }

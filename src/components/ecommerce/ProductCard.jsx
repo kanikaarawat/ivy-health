@@ -2,11 +2,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Star, Heart, ShoppingCart, Sparkles } from 'lucide-react';
+import { ArrowRight, Star, Heart, ShoppingCart, Sparkles, Eye } from 'lucide-react';
+import { useCart } from '../../context/CartContext';
+import QuickViewModal from '../mobile/QuickViewModal';
+import { triggerStarBurst } from '../animations/MicroInteractions';
 
 export default function ProductCard({ product, productId }) {
   const [isHovered, setIsHovered] = useState(false);
-  const [isFavorite, setIsFavorite] = useState(false);
+  const [quickViewOpen, setQuickViewOpen] = useState(false);
+  const { toggleWishlist, wishlist, addToCart } = useCart();
+  
+  const isInWishlist = wishlist.find(item => item.id === productId);
 
   return (
     <motion.div
@@ -65,19 +71,40 @@ export default function ProductCard({ product, productId }) {
             {/* Favorite Icon */}
             <motion.button
               className="absolute top-4 left-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg"
-              whileHover={{ scale: 1.2 }}
+              whileHover={{ scale: 1.2, rotate: [0, -10, 10, 0] }}
               whileTap={{ scale: 0.9 }}
               onClick={(e) => {
                 e.preventDefault();
-                setIsFavorite(!isFavorite);
+                toggleWishlist({ id: productId, ...product });
+                // Add star burst on wishlist
+                if (!isInWishlist) {
+                  const rect = e.currentTarget.getBoundingClientRect();
+                  const x = (rect.left + rect.width / 2) / window.innerWidth;
+                  const y = (rect.top + rect.height / 2) / window.innerHeight;
+                  triggerStarBurst(x, y);
+                }
               }}
               animate={{ 
-                scale: isFavorite ? [1, 1.3, 1] : 1,
+                scale: isInWishlist ? [1, 1.3, 1] : 1,
               }}
             >
               <Heart 
-                className={`w-5 h-5 ${isFavorite ? 'fill-red-500 text-red-500' : 'text-text-body'}`}
+                className={`w-5 h-5 ${isInWishlist ? 'fill-red-500 text-red-500' : 'text-text-body'}`}
               />
+            </motion.button>
+
+            {/* Quick View - Mobile */}
+            <motion.button
+              className="lg:hidden absolute bottom-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg"
+              whileTap={{ scale: 0.9 }}
+              onClick={(e) => {
+                e.preventDefault();
+                setQuickViewOpen(true);
+              }}
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: isHovered ? 1 : 0, scale: isHovered ? 1 : 0 }}
+            >
+              <Eye className="w-5 h-5 text-slate-700" />
             </motion.button>
 
             {/* Sparkle Effect */}
@@ -163,6 +190,14 @@ export default function ProductCard({ product, productId }) {
           />
         </motion.div>
       </Link>
+
+      {/* Quick View Modal */}
+      <QuickViewModal
+        product={product}
+        productId={productId}
+        isOpen={quickViewOpen}
+        onClose={() => setQuickViewOpen(false)}
+      />
     </motion.div>
   );
 }
