@@ -1,15 +1,18 @@
 // src/components/global/Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { content } from '../../content/data';
+import { useCart } from '../../context/CartContext';
+import PulsingBadge from '../animations/PulsingBadge';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [shopMenuOpen, setShopMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { cartTotal } = useCart();
 
   const { mainNav } = content.sitemap;
   const { footerProducts } = content.sitemap;
@@ -111,8 +114,18 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden lg:block">
+          {/* Cart & CTA Buttons */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Cart Button */}
+            <Link
+              to="/cart"
+              className="relative p-2.5 hover:bg-slate-100 rounded-full transition-colors"
+            >
+              <ShoppingCart className="w-6 h-6 text-slate-700" />
+              <PulsingBadge count={cartTotal} />
+            </Link>
+
+            {/* Contact Button */}
             <Link
               to="/contact"
               className="px-6 py-2.5 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors"

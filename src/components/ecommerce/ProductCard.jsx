@@ -138,8 +138,22 @@ export default function ProductCard({ product, productId }) {
               {product.description}
             </p>
 
+            {/* Add to Cart Button - Always Visible */}
+            <motion.button
+              onClick={(e) => {
+                e.preventDefault();
+                addToCart({ id: productId, ...product });
+              }}
+              className="w-full mt-3 py-3 bg-slate-900 text-white rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-slate-800 transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <ShoppingCart className="w-4 h-4" />
+              <span>Add to Cart</span>
+            </motion.button>
+
             {/* Interactive Footer */}
-            <div className="flex items-center justify-between pt-3 border-t border-primary/10">
+            <div className="flex items-center justify-between pt-3">
               <div className="flex items-center gap-2">
                 <motion.div 
                   className="w-2 h-2 rounded-full bg-green-500"
@@ -154,14 +168,14 @@ export default function ProductCard({ product, productId }) {
                 <span className="text-xs text-text-body font-medium">In Stock</span>
               </div>
               
-              {/* View Details Button */}
+              {/* View Details Link */}
               <motion.div 
-                className="flex items-center gap-2 text-primary font-bold"
-                animate={{ x: isHovered ? 5 : 0 }}
+                className="flex items-center gap-1 text-slate-600 text-xs"
+                animate={{ x: isHovered ? 3 : 0 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <span className="text-sm">View Details</span>
-                <ArrowRight className="w-4 h-4" />
+                <span>Details</span>
+                <ArrowRight className="w-3 h-3" />
               </motion.div>
             </div>
 

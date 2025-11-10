@@ -2,15 +2,18 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Package, CheckCircle, Leaf, Share2, Heart } from 'lucide-react';
+import { ArrowLeft, Package, CheckCircle, Leaf, Share2, Heart, ShoppingCart } from 'lucide-react';
 import ProductTabs from '../components/ecommerce/ProductTabs';
 import R3FProductViewer from '../components/3d/R3FProductViewer';
 import ProductCard from '../components/ecommerce/ProductCard';
 import { content } from '../content/data';
+import { useCart } from '../context/CartContext';
+import ShareButton from '../components/common/ShareButton';
 
 export default function ProductDetailPage() {
   const { productId } = useParams();
   const [selectedSize, setSelectedSize] = useState(0);
+  const { addToCart, toggleWishlist, wishlist } = useCart();
   
   const { products, categories } = content.productData;
   const { topSellers } = content.homePage;
@@ -32,6 +35,7 @@ export default function ProductDetailPage() {
 
   const category = categories[product.category];
   const isTopSeller = topSellers.includes(productId);
+  const isInWishlist = wishlist.find(item => item.id === productId);
   
   // Get related products
   const relatedProducts = Object.entries(products)
@@ -176,19 +180,48 @@ export default function ProductDetailPage() {
               )}
 
               {/* CTA Buttons */}
-              <div className="flex flex-wrap gap-4 pt-4">
-                <Link
-                  to="/contact"
-                  className="flex-1 min-w-[200px] px-8 py-4 bg-primary text-white rounded-full font-semibold text-center hover:bg-primary/90 transition-all"
+              <div className="space-y-4 pt-4">
+                {/* Add to Cart - Primary Button */}
+                <motion.button
+                  onClick={() => addToCart({ id: productId, ...product })}
+                  className="w-full px-8 py-5 bg-slate-900 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 hover:bg-slate-800 transition-all shadow-xl"
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  Inquire Now
-                </Link>
-                <button className="p-4 border-2 border-border hover:border-primary/50 rounded-full transition-all">
-                  <Share2 className="w-5 h-5 text-primary" />
-                </button>
-                <button className="p-4 border-2 border-border hover:border-primary/50 rounded-full transition-all">
-                  <Heart className="w-5 h-5 text-primary" />
-                </button>
+                  <ShoppingCart className="w-6 h-6" />
+                  <span>Add to Cart</span>
+                </motion.button>
+
+                {/* Secondary Actions */}
+                <div className="flex gap-3">
+                  <Link
+                    to="/contact"
+                    className="flex-1 px-6 py-3 bg-white border-2 border-slate-200 text-slate-900 rounded-xl font-semibold text-center hover:border-slate-300 transition-all"
+                  >
+                    Inquire Now
+                  </Link>
+                  
+                  <ShareButton 
+                    url={`${window.location.origin}/product/${productId}`}
+                    title={product.name}
+                    className="px-4 py-3 border-2 border-slate-200 hover:border-slate-300 rounded-xl transition-all"
+                  />
+                  
+                  <motion.button
+                    onClick={() => toggleWishlist({ id: productId, ...product })}
+                    className={`px-4 py-3 border-2 rounded-xl transition-all ${
+                      isInWishlist
+                        ? 'border-red-200 bg-red-50'
+                        : 'border-slate-200 hover:border-slate-300'
+                    }`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Heart 
+                      className={`w-5 h-5 ${isInWishlist ? 'fill-red-500 text-red-500' : 'text-slate-700'}`}
+                    />
+                  </motion.button>
+                </div>
               </div>
 
               {/* Certifications */}

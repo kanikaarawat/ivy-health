@@ -2,14 +2,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Star, ArrowRight, Eye } from 'lucide-react';
+import { Star, ArrowRight, Eye, ShoppingCart } from 'lucide-react';
 import { content } from '../../content/data';
 import QuickViewModal from './QuickViewModal';
+import { useCart } from '../../context/CartContext';
 
 export default function MobileProductShowcase() {
   const { topSellers } = content.homePage;
   const { products } = content.productData;
   const [quickViewProduct, setQuickViewProduct] = useState(null);
+  const { addToCart } = useCart();
 
   const topSellerProducts = topSellers.map(id => ({
     id,
@@ -65,15 +67,25 @@ export default function MobileProductShowcase() {
                   {product.description}
                 </p>
 
-                {/* Rating & Price */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-0.5">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3 h-3 fill-slate-900 text-slate-900" />
-                    ))}
-                  </div>
-                  <span className="text-[10px] text-slate-500 font-medium">In Stock</span>
-                  </div>
+                {/* Rating & Add Button */}
+                <div className="flex items-center gap-0.5 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-3 h-3 fill-slate-900 text-slate-900" />
+                  ))}
+                  <span className="text-[10px] text-slate-500 ml-auto font-medium">In Stock</span>
+                </div>
+
+                {/* Add to Cart Button */}
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addToCart({ id: product.id, ...product });
+                  }}
+                  className="w-full py-2.5 bg-slate-900 text-white rounded-xl font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform"
+                >
+                  <ShoppingCart className="w-4 h-4" />
+                  <span>Add to Cart</span>
+                </button>
                 </div>
               </motion.div>
             </Link>
