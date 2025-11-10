@@ -186,3 +186,33 @@ export const triggerMoneyRain = () => {
   });
 };
 
+// Sad animation for removing items (crying face)
+export const triggerSadRemoval = (x = 0.5, y = 0.5) => {
+  const scalar = 2;
+  const sadFace = confetti.shapeFromText({ text: '😢', scalar });
+  const brokenHeart = confetti.shapeFromText({ text: '💔', scalar });
+
+  // Sad face falls down
+  confetti({
+    shapes: [sadFace, brokenHeart],
+    particleCount: 10,
+    spread: 40,
+    origin: { x, y },
+    scalar,
+    startVelocity: 15,
+    gravity: 1.5,
+    colors: ['#94A3B8', '#64748B', '#475569'],
+  });
+
+  // Tears falling
+  confetti({
+    particleCount: 20,
+    spread: 30,
+    origin: { x, y },
+    colors: ['#93C5FD', '#60A5FA', '#3B82F6'],
+    startVelocity: 10,
+    gravity: 2,
+    scalar: 0.5,
+  });
+};
+

@@ -1,7 +1,7 @@
 // src/context/CartContext.jsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { triggerShoppingBag, triggerHeartExplosion, triggerCartBomb } from '../components/animations/MicroInteractions';
+import { triggerShoppingBag, triggerHeartExplosion, triggerSadRemoval } from '../components/animations/MicroInteractions';
 
 const CartContext = createContext();
 
@@ -62,9 +62,16 @@ export function CartProvider({ children }) {
 
   const removeFromCart = (productId) => {
     setCart(cart.filter(item => item.id !== productId));
-    // Trigger bomb animation
-    triggerCartBomb();
-    toast.success('Removed from cart');
+    // Trigger sad animation - crying face and broken heart
+    triggerSadRemoval();
+    toast('Removed from cart', {
+      icon: '😢',
+      duration: 2000,
+      style: {
+        background: '#F1F5F9',
+        color: '#475569',
+      },
+    });
   };
 
   const updateQuantity = (productId, quantity) => {
