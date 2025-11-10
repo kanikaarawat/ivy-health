@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, ScrollRestoration } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import { CartProvider } from './context/CartContext';
 import ToastProvider from './components/common/ToastProvider';
 import ContactButtons from './components/common/ContactButtons';
@@ -53,19 +54,21 @@ function App() {
           <EnhancedMobileHeader />
         
         <main className="flex-grow pb-20 lg:pb-0">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/our-science" element={<SciencePage />} />
-            <Route path="/contract-manufacturing" element={<ContractManufacturingPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/shop" element={<ShopLandingPage />} />
-            <Route path="/shop/:categorySlug" element={<CategoryPage />} />
-            <Route path="/product/:productId" element={<ProductDetailPage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/legal/:pageSlug" element={<LegalPage />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/our-science" element={<SciencePage />} />
+              <Route path="/contract-manufacturing" element={<ContractManufacturingPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/shop" element={<ShopLandingPage />} />
+              <Route path="/shop/:categorySlug" element={<CategoryPage />} />
+              <Route path="/product/:productId" element={<ProductDetailPage />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/legal/:pageSlug" element={<LegalPage />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </AnimatePresence>
         </main>
         
         {/* Desktop Footer - Hidden on Mobile */}
