@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-import { triggerSadRemoval } from '../components/animations/MicroInteractions';
 
 export default function CartPage() {
   const { cart, removeFromCart, updateQuantity, clearCart } = useCart();
@@ -91,14 +90,7 @@ export default function CartPage() {
                         <p className="text-sm text-slate-500">{item.type}</p>
                       </div>
                       <button
-                        onClick={(e) => {
-                          // Get button position for localized animation
-                          const rect = e.currentTarget.getBoundingClientRect();
-                          const x = (rect.left + rect.width / 2) / window.innerWidth;
-                          const y = (rect.top + rect.height / 2) / window.innerHeight;
-                          triggerSadRemoval(x, y);
-                          removeFromCart(item.id);
-                        }}
+                        onClick={() => removeFromCart(item.id)}
                         className="w-8 h-8 rounded-lg bg-red-50 text-red-600 flex items-center justify-center hover:bg-red-100 transition-colors flex-shrink-0"
                       >
                         <Trash2 className="w-4 h-4" />

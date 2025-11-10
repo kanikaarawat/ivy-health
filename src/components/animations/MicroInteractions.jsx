@@ -12,30 +12,20 @@ export const triggerConfetti = (x = 0.5, y = 0.5) => {
   });
 };
 
-// Professional wishlist - rose/red particles
+// Heart explosion for wishlist
 export const triggerHeartExplosion = (x = 0.5, y = 0.5) => {
-  // Pink/red elegant burst
-  confetti({
-    particleCount: 35,
-    spread: 90,
-    origin: { x, y },
-    colors: ['#F43F5E', '#FB7185', '#FDA4AF'],
-    startVelocity: 28,
-    decay: 0.91,
-    gravity: 1.0,
-    scalar: 0.9,
-  });
+  const scalar = 2;
+  const heart = confetti.shapeFromText({ text: '❤️', scalar });
 
-  // Secondary softer particles
   confetti({
-    particleCount: 20,
-    spread: 70,
+    shapes: [heart],
+    particleCount: 30,
+    spread: 100,
     origin: { x, y },
-    colors: ['#FECDD3', '#FCA5A5'],
-    startVelocity: 20,
-    decay: 0.88,
-    gravity: 0.8,
-    scalar: 0.6,
+    scalar,
+    startVelocity: 30,
+    decay: 0.9,
+    gravity: 1.2,
   });
 };
 
@@ -124,28 +114,27 @@ export const triggerStarBurst = (x = 0.5, y = 0.5) => {
   });
 };
 
-// Professional add to cart - elegant particles
+// Shopping bag celebration
 export const triggerShoppingBag = (x = 0.5, y = 0.5) => {
-  // Emerald green burst
+  const scalar = 2;
+  const emoji = confetti.shapeFromText({ text: '🛒', scalar });
+
   confetti({
-    particleCount: 40,
-    spread: 80,
+    shapes: [emoji],
+    particleCount: 15,
+    spread: 100,
     origin: { x, y },
-    colors: ['#10B981', '#14B8A6', '#059669'],
-    startVelocity: 25,
-    gravity: 0.9,
-    scalar: 0.8,
+    scalar,
+    startVelocity: 30,
+    gravity: 0.8,
   });
 
-  // Gold accent sparkles
+  // Add some sparkles
   confetti({
-    particleCount: 25,
-    spread: 60,
+    particleCount: 50,
+    spread: 70,
     origin: { x, y },
-    colors: ['#FBBF24', '#F59E0B', '#D97706'],
-    startVelocity: 30,
-    gravity: 0.7,
-    scalar: 0.6,
+    colors: ['#10B981', '#FBBF24'],
   });
 };
 
@@ -197,36 +186,33 @@ export const triggerMoneyRain = () => {
   });
 };
 
-// Professional removal animation - localized to button, subtle particles fade down
+// Sad animation for removing items (crying face)
 export const triggerSadRemoval = (x = 0.5, y = 0.5) => {
-  // Very localized gray particles - small spread, stays near button
+  const scalar = 2;
+  const sadFace = confetti.shapeFromText({ text: '😢', scalar });
+  const brokenHeart = confetti.shapeFromText({ text: '💔', scalar });
+
+  // Sad face falls down
   confetti({
-    particleCount: 15,
-    spread: 25, // Reduced spread - stays near button
+    shapes: [sadFace, brokenHeart],
+    particleCount: 10,
+    spread: 40,
     origin: { x, y },
-    colors: ['#CBD5E1', '#94A3B8', '#64748B'],
-    startVelocity: 10,
+    scalar,
+    startVelocity: 15,
     gravity: 1.5,
-    scalar: 0.5, // Smaller particles
-    decay: 0.95,
-    ticks: 60,
-    angle: 270, // Downward direction
+    colors: ['#94A3B8', '#64748B', '#475569'],
   });
 
-  // Tiny secondary particles - very localized
-  setTimeout(() => {
-    confetti({
-      particleCount: 8,
-      spread: 15, // Very tight spread
-      origin: { x, y },
-      colors: ['#E2E8F0', '#CBD5E1'],
-      startVelocity: 6,
-      gravity: 1.2,
-      scalar: 0.3, // Very small particles
-      decay: 0.93,
-      ticks: 50,
-      angle: 270,
-    });
-  }, 80);
+  // Tears falling
+  confetti({
+    particleCount: 20,
+    spread: 30,
+    origin: { x, y },
+    colors: ['#93C5FD', '#60A5FA', '#3B82F6'],
+    startVelocity: 10,
+    gravity: 2,
+    scalar: 0.5,
+  });
 };
 
