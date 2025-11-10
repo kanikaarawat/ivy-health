@@ -1,8 +1,8 @@
 // src/pages/CategoryPage.jsx
 import React, { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Filter, Grid3x3, List, Search } from 'lucide-react';
+import { Filter, Grid3x3, List, Search, ArrowRight } from 'lucide-react';
 import ProductCard from '../components/ecommerce/ProductCard';
 import { content } from '../content/data';
 

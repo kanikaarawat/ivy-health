@@ -83,11 +83,11 @@ export default function TopSellerCarousel() {
           ))}
         </Swiper>
 
-        {/* Navigation Buttons */}
-        <button className="swiper-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-border hover:border-primary shadow-lg flex items-center justify-center text-primary transition-all">
+        {/* Navigation Buttons - Hidden on Mobile */}
+        <button className="swiper-prev hidden lg:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary/20 hover:border-primary shadow-lg items-center justify-center text-primary transition-all hover:scale-110">
           <ArrowLeft size={20} />
         </button>
-        <button className="swiper-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-10 h-10 rounded-full bg-white border border-border hover:border-primary shadow-lg flex items-center justify-center text-primary transition-all">
+        <button className="swiper-next hidden lg:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary/20 hover:border-primary shadow-lg items-center justify-center text-primary transition-all hover:scale-110">
           <ArrowRight size={20} />
         </button>
       </div>

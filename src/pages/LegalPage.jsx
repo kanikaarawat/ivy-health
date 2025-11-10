@@ -34,7 +34,7 @@ export default function LegalPage() {
           </div>
 
           <div className="prose prose-lg max-w-none">
-            {legalPage.content.split('\n').map((paragraph, index) => {
+            {legalPage.body.split('\n').map((paragraph, index) => {
               if (paragraph.startsWith('# ')) {
                 return (
                   <h2 key={index} className="font-serif text-3xl font-bold text-primary mt-8 mb-4">

@@ -142,31 +142,115 @@ export default function AboutPage() {
         </div>
       </AnimatedSection>
 
-      {/* Timeline */}
-      <AnimatedSection className="bg-white">
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl font-bold text-primary mb-4">
-            Our Journey
-          </h2>
+      {/* Interactive Timeline */}
+      <AnimatedSection className="bg-gradient-to-b from-white to-cream/30 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 2px 2px, #2D5F3F 1px, transparent 1px)`,
+            backgroundSize: '30px 30px'
+          }} />
         </div>
-        <div className="max-w-4xl mx-auto">
+
+        <div className="text-center mb-16 relative z-10">
+          <motion.h2 
+            className="font-serif text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Our Journey
+          </motion.h2>
+          <motion.p
+            className="text-xl text-text-body/70"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+          >
+            23+ Years of Excellence and Innovation
+          </motion.p>
+        </div>
+
+        <div className="max-w-5xl mx-auto relative">
+          {/* Vertical Line */}
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-accent to-primary/20" />
+
           {aboutPage.timeline.map((item, index) => (
             <motion.div
               key={item.year}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-8 mb-8"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50, scale: 0.8 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ 
+                type: "spring",
+                stiffness: 100,
+                delay: index * 0.1 
+              }}
+              className={`relative flex items-center gap-8 mb-16 ${
+                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+              }`}
             >
-              <div className="flex-shrink-0 w-32">
-                <span className="font-serif text-3xl font-bold text-accent">
-                  {item.year}
-                </span>
+              {/* Year Badge */}
+              <motion.div 
+                className={`flex-shrink-0 w-full md:w-5/12 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}
+                whileHover={{ scale: 1.05 }}
+              >
+                <motion.div
+                  className="inline-block bg-gradient-to-br from-accent to-primary text-white px-8 py-4 rounded-2xl shadow-2xl"
+                  whileHover={{ 
+                    boxShadow: "0 20px 40px rgba(212, 165, 116, 0.4)",
+                    y: -5
+                  }}
+                >
+                  <span className="font-serif text-4xl font-bold">{item.year}</span>
+                </motion.div>
+              </motion.div>
+
+              {/* Center Dot */}
+              <div className="absolute left-8 md:left-1/2 -translate-x-1/2 flex items-center justify-center z-20">
+                <motion.div 
+                  className="w-6 h-6 bg-gradient-to-br from-primary to-accent rounded-full border-4 border-white shadow-lg"
+                  whileHover={{ scale: 1.5 }}
+                  animate={{
+                    boxShadow: [
+                      "0 0 0 0 rgba(45, 95, 63, 0.4)",
+                      "0 0 0 20px rgba(45, 95, 63, 0)",
+                    ]
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeOut"
+                  }}
+                />
               </div>
-              <div className="flex-shrink-0 w-4 h-4 bg-primary rounded-full" />
-              <div className="flex-grow bg-background p-6 rounded-xl">
-                <p className="text-text-body">{item.event}</p>
-              </div>
+
+              {/* Event Card */}
+              <motion.div 
+                className="flex-grow md:w-5/12 ml-16 md:ml-0"
+                whileHover={{ 
+                  scale: 1.03,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
+                }}
+              >
+                <div className="bg-white p-8 rounded-2xl shadow-xl border-2 border-primary/10 relative overflow-hidden group">
+                  {/* Hover Background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                  
+                  <p className="text-text-body leading-relaxed relative z-10 font-medium">
+                    {item.event}
+                  </p>
+
+                  {/* Corner Decoration */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-accent/10 to-transparent rounded-bl-full" />
+                </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>

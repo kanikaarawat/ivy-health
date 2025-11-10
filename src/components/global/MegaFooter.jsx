@@ -13,11 +13,12 @@ export default function MegaFooter() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Brand */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center">
-                <span className="text-primary font-bold text-xl">I</span>
-              </div>
-              <span className="font-bold text-xl">Ivy Herbals</span>
+            <div className="mb-4">
+              <img 
+                src="/logo.png" 
+                alt="Ivy Herbals Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-white/80 mb-4 text-sm leading-relaxed">
               {global.tagline}

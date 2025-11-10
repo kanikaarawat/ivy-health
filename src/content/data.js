@@ -2,12 +2,59 @@
 export const content = {
   global: {
     email: 'info@ivyherbals.com',
-    phone: '+91 886 509 8678',
-    address: 'Ivy Complex, Dehradun Road, Saharanpur, Uttar Pradesh, 247001',
+    phone: '+91 928 691 2529',
+    address: 'Green Land Complex, Dehradun Road, Saharanpur, Uttar Pradesh, 247001',
     hours: 'Mon - Sat, 09:00 am - 06:00 pm',
     copyright: '© 2024 Ivy Herbals. All Rights Reserved.',
-    certifications: ['ISO Certified', 'HACCP Certified', 'GMP Certified'],
-    tagline: 'Ivy Herbals - Growing the Ivy Way'
+    certifications: ['ISO Certified', 'HACCP Certified', 'GMP Certified', 'AYUSH Certified'],
+    tagline: 'Ivy Herbals - Growing the Ivy Way',
+    brandTagline: 'Your Brand, Backed by Ivy.'
+  },
+
+  // Three Product Divisions
+  divisions: {
+    ayurvedic: {
+      name: 'Ayurvedic & Healthcare',
+      shortName: 'Healthcare',
+      slug: 'ayur3p',
+      tagline: 'Authentic Ayurveda, Engineered with Precision',
+      email: 'ayur3p@ivyherbals.com',
+      website: 'www.ivyherbals.com/ayur3p',
+      products: 'Tablets • Capsules • Powders • Liquids • Avale',
+      specializations: 5,
+      yearsOfExcellence: '23+',
+      formulations: '200+',
+      businessClients: '500+',
+      description: 'At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.'
+    },
+    feed: {
+      name: 'Animal Feed Supplements',
+      shortName: 'Feed Supplements',
+      slug: 'feed3p',
+      tagline: 'Advanced Nutrition, Engineered for Performance',
+      email: 'feed3p@ivyherbals.com',
+      website: 'www.ivyherbals.com/feed3p',
+      products: 'Powders • Liquids • Granules • Boluses',
+      specializations: 5,
+      yearsOfExcellence: '23+',
+      formulations: '250+',
+      businessClients: '700+',
+      description: 'We combine scientific formulation with on-ground farming insight to deliver high-quality, reliable animal feed supplements.'
+    },
+    cosmetics: {
+      name: 'Cosmetics & Personal Care',
+      shortName: 'Personal Care',
+      slug: 'cosmo3p',
+      tagline: 'Nature\'s Purity, Perfected with Science',
+      email: 'cosmo3p@ivyherbals.com',
+      website: 'www.ivyherbals.com/cosmo3p',
+      products: 'Creams • Lotions • Oils • Gels • Soaps • Serums • Haircare',
+      specializations: 6,
+      yearsOfExcellence: '23+',
+      formulations: '70+',
+      businessClients: '100+',
+      description: 'We unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.'
+    }
   },
 
   sitemap: {
@@ -42,30 +89,30 @@ export const content = {
       cta: 'Explore Products'
     },
     about: {
-      title: 'About Ivy Herbals, 25+ Years in Ayurveda',
-      description: "Ivy Herbals is a company that specializes in the manufacture and supply of various types of health care medicines, personal care products, food supplements, and feed supplements. The company was established in 2003 and is located on Dehradun Road in Saharanpur, Uttar Pradesh, India. The company is certified by ISO, HACCP, and GMP, which means that it adheres to the highest standards of quality and safety in its manufacturing processes. These certifications are recognized internationally and are a testament to the company's commitment to excellence.",
-      image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop'
+      title: 'About Ivy Herbals, 23+ Years in Ayurveda',
+      description: "Ivy Herbals is a company that specializes in the manufacture and supply of various types of health care medicines, personal care products, food supplements, and feed supplements. The company was established in 2003 and is located on Dehradun Road in Saharanpur, Uttar Pradesh, India. The company is certified by ISO, HACCP, GMP, and AYUSH, which means that it adheres to the highest standards of quality and safety in its manufacturing processes. These certifications are recognized internationally and are a testament to the company's commitment to excellence.",
+      image: '/about.png'
     },
     categories: [
       {
         title: 'Health Care',
         description: 'Our Ayurvedic Medicines are designed to promote overall health and prosperity.',
         offerings: ['Syrups', 'Powders', 'Oils'],
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=800&fit=crop',
+        image: '/healthcare.png',
         path: '/shop/health-care'
       },
       {
         title: 'Feed Supplements',
         description: "Introducing our premium feed supplements - the perfect solution to keep your livestock, pets, and animals happy and healthy. We've developed specialized supplements for different animals, ensuring that your cattle, pets, and other animals receive the best care.",
         offerings: ['Powders', 'Liquids', 'Bolus'],
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop',
+        image: '/feedsupplements.png',
         path: '/shop/feed-supplements'
       },
       {
         title: 'Personal Care',
         description: 'Enter the realm of self-care with Ivy Herbals, where nature meets luxury and science supports beauty.',
         offerings: ['Face Care', 'Body Care', 'Hair Care'],
-        image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&h=800&fit=crop',
+        image: '/personalcare.png',
         path: '/shop/personal-care'
       }
     ],
@@ -77,14 +124,14 @@ export const content = {
           category: 'Diabetes',
           title: 'Managing Diabetes Naturally With A Healthy Lifestyle and Diet',
           snippet: 'According to reports, one in every six persons in the world with diabetes is from India, earning it the title of global diabetes capital. Diabetes occurs when your blood glucose, also known as blood sugar, is abnormally high.',
-          image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&h=400&fit=crop',
+          image: '/Diabetes Management Article.png',
           path: '/blog/managing-diabetes-naturally'
         },
         {
           category: 'Kidney Stones',
           title: 'Ayurvedic Herbs for Kidney Stone Relief: The Ancient Solution You Need',
           snippet: 'Pain on either side of the lower back or abdomen: This type of pain can be a symptom of various conditions, including kidney stones, urinary tract infections, or even a ruptured ovarian cyst. Pain on one side of the lower back or abdomen can indicate an issue with the kidney or the ureter on that side.',
-          image: 'https://images.unsplash.com/photo-1571842908925-a39b72270e2b?w=600&h=400&fit=crop',
+          image: '/Kidney Stone Article.png',
           path: '/blog/ayurvedic-herbs-kidney-stone'
         }
       ],
@@ -100,30 +147,88 @@ export const content = {
       title: 'About Ivy Herbals'
     },
     overview: {
-      title: '25+ Years of Ayurvedic Excellence',
-      body: "Ivy Herbals is a company that specializes in the manufacture and supply of various types of health care medicines, personal care products, food supplements, and feed supplements. The company was established in 2003 and is located on Dehradun Road in Saharanpur, Uttar Pradesh, India. The company is certified by ISO, HACCP, and GMP, adhering to the highest standards of quality and safety in its manufacturing processes. They believe that nature can heal and nourish, and are committed to bringing the best of Ayurveda to their customers.",
+      title: '23+ Years of Ayurvedic Excellence',
+      body: "Ivy Herbals is a company that specializes in the manufacture and supply of various types of health care medicines, personal care products, food supplements, and feed supplements. The company was established in 2003 and is located on Dehradun Road in Saharanpur, Uttar Pradesh, India. The company is certified by ISO, HACCP, GMP, and AYUSH, adhering to the highest standards of quality and safety in its manufacturing processes. They believe that nature can heal and nourish, and are committed to bringing the best of Ayurveda to their customers.",
       tagline: 'Ayurveda Se Swasth Hai Swasth Se Sundarta',
-      image: 'https://images.unsplash.com/photo-1574169208507-84376144848b?w=1200&h=800&fit=crop'
+      image: '/aboutpageoverviewimage.png'
     },
     vision: {
       title: 'Our Vision',
-      body: "The company's concept encompasses the integrity of the ivy plant, which symbolizes growth as it continues to produce vines until it approaches the sunlight. We strive to achieve the pinnacle of success by making Ayurveda accessible to everyone. Much like ivy represents eternity, the major agenda we pursue is ongoing evolution for enhancing our products and services to win over customers and dwell in their hearts for eternity."
+      text: "The company's concept encompasses the integrity of the ivy plant, which symbolizes growth as it continues to produce vines until it approaches the sunlight. We strive to achieve the pinnacle of success by making Ayurveda accessible to everyone. Much like ivy represents eternity, the major agenda we pursue is ongoing evolution for enhancing our products and services to win over customers and dwell in their hearts for eternity."
     },
+    mission: {
+      title: 'Our Mission',
+      text: "To bring the healing power of Ayurveda to everyone through scientifically validated, high-quality herbal products. We are committed to excellence in manufacturing, innovation in research, and integrity in all our operations, ensuring that every product we create promotes wellness and vitality."
+    },
+    values: [
+      {
+        title: 'Quality',
+        description: 'We maintain the highest standards in every product through rigorous testing and quality control.'
+      },
+      {
+        title: 'Innovation',
+        description: 'Combining ancient Ayurvedic wisdom with modern scientific research and technology.'
+      },
+      {
+        title: 'Integrity',
+        description: 'Transparent operations and honest communication with all our stakeholders.'
+      },
+      {
+        title: 'Sustainability',
+        description: 'Committed to eco-friendly practices and sustainable sourcing of ingredients.'
+      }
+    ],
     quality: {
-      title: 'Quality Process',
-      body: "Quality is paramount at Ivy Herbals. Our unique Ayurvedic ingredient blend offers a gentle way to remain healthy. We provide a wide selection of conventional well-being products handled and manufactured hygienically, utilizing the highest quality raw ingredients. Our objective is to deliver the finest of nature via our finest natural and caring products, free of toxins and hazardous chemicals."
+      title: 'Quality Assurance',
+      description: "Quality is paramount at Ivy Herbals. Our unique Ayurvedic ingredient blend offers a gentle way to remain healthy. We provide a wide selection of conventional well-being products handled and manufactured hygienically, utilizing the highest quality raw ingredients.",
+      certifications: [
+        {
+          name: 'ISO Certified',
+          description: 'International standards for quality management systems'
+        },
+        {
+          name: 'GMP Certified',
+          description: 'Good Manufacturing Practices ensuring safety and quality'
+        },
+        {
+          name: 'AYUSH Certified',
+          description: 'Government certification for authentic Ayurvedic products'
+        }
+      ]
     },
-    resources: {
-      title: 'Our Resources',
-      body: "Ivy Herbals is managed by a well-organized group of knowledgeable individuals that work together with the primary goal of providing the highest quality products at the most reasonable pricing while maintaining a well-drafted infrastructure. Their knowledgeable team includes research scientists, veterinary consultants, cooperative labor, and innovative and accessible administration. Their facilities cover a large area, and the production operation is fully compliant with GMP norms."
-    }
+    timeline: [
+      {
+        year: '2003',
+        event: 'Ivy Herbals was established with a vision to make authentic Ayurveda accessible to everyone.'
+      },
+      {
+        year: '2008',
+        event: 'Achieved ISO certification and expanded our manufacturing capabilities.'
+      },
+      {
+        year: '2012',
+        event: 'Launched our first range of contract manufacturing services for Ayurvedic brands.'
+      },
+      {
+        year: '2016',
+        event: 'Received AYUSH certification and established our R&D division.'
+      },
+      {
+        year: '2020',
+        event: 'Expanded into cosmetics and personal care manufacturing with dedicated facilities.'
+      },
+      {
+        year: '2024',
+        event: 'Serving 500+ business clients worldwide with 200+ formulations across three divisions.'
+      }
+    ]
   },
 
   sciencePage: {
     hero: {
       title: 'Expert Team, Cutting-Edge Research'
     },
-    team: {
+    intro: {
       title: "Our R&D Team",
       body: "Our R&D team at Ivy Herbals is comprised of experienced and highly trained professionals with expertise in researching Ayurvedic herbs and natural ingredients. The team is dedicated to creating safe and effective products that meet the highest quality standards. Our research includes ongoing clinical trials to test our products' efficacy and identify potential side effects. In addition to traditional Ayurvedic herbs, Ivy Herbals is also exploring new and emerging natural ingredients from around the world to add to its product line."
     },
@@ -148,67 +253,133 @@ export const content = {
         description: 'Clinical trials and quality checks ensure consistent effectiveness and safety.',
         icon: 'check-circle'
       }
-    ]
+    ],
+    research: {
+      title: 'Cutting-Edge Research & Development',
+      body: "At Ivy Herbals, we bridge the gap between ancient Ayurvedic wisdom and modern scientific validation. Our state-of-the-art R&D facility is equipped with advanced testing equipment and staffed by experienced researchers, pharmacologists, and Ayurvedic experts who work together to create formulations that are both traditional and scientifically validated.",
+      highlights: [
+        'ISO, HACCP, GMP, and AYUSH certified manufacturing processes',
+        'Advanced laboratory testing for purity and potency',
+        'Clinical trials and efficacy studies',
+        'Traditional ingredient sourcing with modern quality control',
+        'Continuous innovation and product development',
+        'Collaboration with Ayurvedic practitioners and scientists'
+      ]
+    }
   },
 
   contractPage: {
     hero: {
       title: '3rd Party Manufacturing for your Brand',
-      subtitle: 'You Say, We Create!'
+      subtitle: 'Your Brand, Backed by Ivy.'
     },
     overview: {
       title: 'Your Reliable Contract Manufacturing Partner',
-      body: "Ivy Herbals positions itself as a reliable 3rd Party Manufacturer for Health Care, Personal Care, Food Supplements, and Feed Supplements products. The service is designed to help small businesses build a name for themselves in the ayurvedic and wellness industry by allowing them to sell more items. Ivy Herbals is an ISO-certified and GMP-compliant third-party manufacturer offering a diverse selection of ayurvedic and herbal products. Our products are result-oriented and promote well-being by using 100% natural raw herbal components and extracts."
+      body: "Ivy Herbals positions itself as a reliable 3rd Party Manufacturer for Health Care, Personal Care, Food Supplements, and Feed Supplements products. The service is designed to help small businesses build a name for themselves in the ayurvedic and wellness industry by allowing them to sell more items. Ivy Herbals is an ISO, HACCP, GMP, and AYUSH certified third-party manufacturer offering a diverse selection of ayurvedic and herbal products. Our products are result-oriented and promote well-being by using 100% natural raw herbal components and extracts."
     },
     benefits: {
       title: 'Why Choose Ivy Herbals?',
       list: [
-        'ISO, HACCP & GMP Certified Manufacturing',
-        '20+ Years of Industry Expertise',
+        'All Ayurvedic forms under one certified roof',
+        'Custom formulations & third-party R&D support',
+        'Fast turnaround with reliable supply chain',
+        'Premium & trending packaging solutions',
+        'Dedicated project coordination & branding assistance',
+        'Trusted by startups and established Ayurvedic brands alike',
+        'ISO, HACCP, GMP & AYUSH Certified Manufacturing',
+        '23+ Years of Industry Expertise',
         'State-of-the-Art Production Facilities',
-        'Quality Assurance at Every Step',
-        'Competitive Pricing',
-        'Flexible MOQ (Minimum Order Quantity)',
-        'Complete Regulatory Support',
-        'Custom Formulation Development'
+        'Quality Assurance at Every Step'
       ]
     },
     process: {
       title: 'Our 4-Step Manufacturing Process',
       steps: [
-        { number: '01', title: 'Consultation', description: 'Discuss your requirements, target market, and product specifications' },
-        { number: '02', title: 'Formulation', description: 'Our R&D team develops or refines the product formula' },
-        { number: '03', title: 'Manufacturing', description: 'GMP-certified production with strict quality controls' },
-        { number: '04', title: 'Delivery', description: 'Quality-checked products delivered to your doorstep' }
-      ]
+        { 
+          number: '01', 
+          title: 'Decide the Product Form', 
+          description: 'Choose from our diverse range of Ayurvedic dosage forms – tablets, capsules, powders, liquids, and avale. We guide you through what suits your brand vision best.'
+        },
+        { 
+          number: '02', 
+          title: 'Formulation Development', 
+          description: 'Choose from our ready-to-market formulations or create a custom blend with our experienced Ayurvedic formulators. We ensure scientific validation and authentic sourcing of ingredients.'
+        },
+        { 
+          number: '03', 
+          title: 'Packaging Selection', 
+          description: 'From minimalist jars to premium metallic cartons, we provide trend-driven packaging solutions that align with your brand identity. Design assistance and mockups available on request.'
+        },
+        { 
+          number: '04', 
+          title: 'Final Production & Delivery', 
+          description: 'Once approved, production begins under strict quality checks. Every batch is lab-tested, documented, and securely packed for shipment.'
+        }
+      ],
+      bonus: {
+        title: 'Branding & Regulatory Support',
+        description: 'We help you with label design, ingredient justification, and compliance under AYUSH & FSSAI norms.'
+      }
     },
     categories: {
       title: 'What Ivy Herbals Does For You',
       list: [
-        'Health Care Products (Syrups, Powders, Oils)',
-        'Personal Care Products (Face Care, Body Care, Hair Care)',
+        'Health Care Products (Tablets, Capsules, Syrups, Powders, Oils, Avale)',
+        'Personal Care Products (Creams, Lotions, Face Wash, Gels, Soaps, Serums, Hair Care)',
         'Food Supplements (Protein Powders, Juices)',
-        'Feed Supplements (Powders, Liquids, Bolus)',
+        'Feed Supplements (Powders, Liquids, Granules, Bolus)',
         'Custom Product Development',
         'Private Labeling & Packaging',
-        'Regulatory Compliance Support',
+        'Regulatory Compliance Support (AYUSH, BIS, FSSAI)',
         'Quality Testing & Certification'
+      ]
+    },
+    moq: {
+      title: 'MOQ & Timelines',
+      description: 'Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.',
+      note: 'Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection. Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.'
+    },
+    packaging: {
+      title: 'Packaging Excellence',
+      subtitle: 'We don\'t just manufacture products. We create brand experiences.',
+      options: [
+        'HDPE / PET bottles & jars',
+        'Glass jars & bottles',
+        'Blister packs & Alu-Alu packs',
+        'Stick packs & sachets',
+        'Premium paper boxes & cartons',
+        'Airless pumps & tubes',
+        'Custom color jars & foiling options',
+        'Eco-friendly refill packs',
+        'Custom label printing & color-coded caps'
       ]
     },
     faqs: {
       title: 'Frequently Asked Questions',
       list: [
         {
+          question: 'Can I start with small quantities?',
+          answer: 'Yes, we offer pilot batches and test runs for selected categories to help you validate your product in the market before scaling up.'
+        },
+        {
+          question: 'Are all products AYUSH compliant?',
+          answer: 'Yes, all formulations are manufactured under AYUSH guidelines and comply with regulatory requirements for safety and efficacy.'
+        },
+        {
+          question: 'Do you help with label design?',
+          answer: 'Absolutely. We offer branding and packaging assistance to bring your vision alive. Our team can help with label design, ingredient declaration, and regulatory compliance.'
+        },
+        {
+          question: 'Can I customize formulations?',
+          answer: 'Yes, we support both ready-to-market formulations and fully customized formulations based on your specific requirements and target market.'
+        },
+        {
           question: 'What is the Minimum Order Quantity (MOQ)?',
           answer: 'The minimum order quantity varies depending on the product category and type. For detailed MOQ information, please contact our team directly with your specific requirements.'
         },
         {
-          question: 'How to View the Catalogue/Category?',
-          answer: 'Clients can visit the website or view the brochure for the wide range of products. To choose the right category, they should consider their target market\'s specific needs and health concerns and consult with the Ivy Herbals team for guidance and recommendations.'
-        },
-        {
           question: 'How to Ask for a Quotation?',
-          answer: 'Clients can contact Ivy Herbals directly through email or phone, specifying the required quantity, desired product specifications, and any private labelling requirements to receive an accurate and detailed quote.'
+          answer: 'Contact Ivy Herbals directly through email or phone, specifying the required quantity, desired product specifications, and any private labelling requirements to receive an accurate and detailed quote.'
         }
       ]
     }
@@ -219,7 +390,116 @@ export const content = {
       title: 'Contact Us',
       subtitle: 'Get Instant Solution to your queries'
     },
-    formIntro: "We're happy to answer any questions and assist you in finding the best products for your needs. Don't hesitate to reach out to us."
+    intro: {
+      title: 'Let\'s Collaborate',
+      body: 'Your brand deserves the best beginning. Let\'s build it together. We\'re happy to answer any questions and assist you in finding the best products for your needs.'
+    },
+    info: {
+      email: 'info@ivyherbals.com',
+      phone: '+91 928 691 2529',
+      address: 'Green Land Complex, Dehradun Road, Saharanpur, Uttar Pradesh, 247001',
+      hours: 'Mon - Sat, 09:00 am - 06:00 pm'
+    },
+    divisionContacts: [
+      { name: 'Ayurvedic & Healthcare', email: 'ayur3p@ivyherbals.com' },
+      { name: 'Animal Feed Supplements', email: 'feed3p@ivyherbals.com' },
+      { name: 'Cosmetics & Personal Care', email: 'cosmo3p@ivyherbals.com' }
+    ]
+  },
+
+  // Comprehensive Product Categories from PDFs
+  productCategories: {
+    ayurvedic: [
+      { name: 'Hair & Scalp Health', description: 'Oils, shampoos, therapies to nourish the roots & control hair fall' },
+      { name: 'Gut & Digestive Balance', description: 'Remedies for bloating, acidity, and gut harmony' },
+      { name: 'Bone & Joint Relief', description: 'Soothing oils and capsules for arthritis and mobility' },
+      { name: 'Men\'s Wellness', description: 'Energy, strength, and reproductive health boosters' },
+      { name: 'Diabetes Care', description: 'Blood sugar management with herbs like Jamun and Gudmar' },
+      { name: 'Kidney & Urinary Health', description: 'Detox, hydration, and comfort' },
+      { name: 'Sleep & Stress Management', description: 'Calming herbs to restore deep rest' },
+      { name: 'Skin Health & Glow', description: 'Creams, face packs, and herbal oils to reveal your natural radiance' },
+      { name: 'Liver & Detox Support', description: 'Powerful detox blends for internal cleansing' },
+      { name: 'Immunity & Vitality', description: 'Strengthen inner defense with Giloy, Ashwagandha, and Tulsi' },
+      { name: 'Women\'s Wellness', description: 'From hormonal balance to lactation and pregnancy care' },
+      { name: 'Heart & Circulation', description: 'Natural ways to manage BP and cholesterol' },
+      { name: 'Oral & Dental Health', description: 'Herbal toothpastes and mouthwashes for oral hygiene' },
+      { name: 'Weight & Metabolism', description: 'Fat-burning, appetite-balancing Ayurvedic blends' },
+      { name: 'Children\'s Immunity & Growth', description: 'Safe, effective Ayurvedic blends for children\'s immunity and more' },
+      { name: 'Brain Support', description: 'Brahmi, Shankhpushpi and more for focus and relaxation' },
+      { name: 'Sexual & Reproductive Health', description: 'Aphrodisiacs and fertility boosters' },
+      { name: 'Vision & Eye Wellness', description: 'Herbal drops and supplements for eye fatigue and clarity' },
+      { name: 'Respiratory & Lung Care', description: 'Asthma, bronchial, and seasonal cold support' },
+      { name: 'Anti-Aging & Longevity', description: 'Combat inflammation and promote graceful aging' }
+    ],
+    feed: {
+      animalSegments: [
+        { name: 'Poultry (Broilers, Layers, Breeders)', description: 'Growth, FCR, immunity, and production' },
+        { name: 'Ruminant (Cattle, Buffalo, Sheep & Goat)', description: 'Milk yield, fertility, and digestion' },
+        { name: 'Swine (Pigs & Piglets)', description: 'Gut, growth & performance blends' },
+        { name: 'Aqua (Fish & Shrimp)', description: 'Growth, FCR & health boosters' },
+        { name: 'Equine (Horses)', description: 'Performance & endurance formulas' },
+        { name: 'Canine (Dogs & Pets)', description: 'Coat, joint & immunity care' }
+      ],
+      categories: [
+        'Nutritional & Metabolic Support',
+        'Gut Health & Digestion',
+        'Liver Health & Growth Promoters',
+        'Immune Modulators & Antioxidants',
+        'Stress Management & Heat Relief',
+        'Respiratory Health',
+        'Reproductive Performance & Fertility',
+        'Toxin Management & Mycotoxin Binders',
+        'Anti-Parasitic & Anti-Coccidial Solutions',
+        'Milk Production Enhancers',
+        'Bone & Joint Health',
+        'Renal & Urinary Health',
+        'Skin & Coat Care',
+        'Farm Environment & Water Care',
+        'Natural Anti-Microbial Growth Promoters',
+        'Digestive & Enzyme Group',
+        'Specialty & Preventive Care',
+        'Organic & Antibiotic-Free Nutrition Range'
+      ]
+    },
+    cosmetics: {
+      skinCare: [
+        'Face Creams & Moisturizers',
+        'Anti-Aging & Collagen Boosting Creams',
+        'Skin Brightening & De-Tanning Gels',
+        'Herbal Face Washes (Neem, Aloe, Charcoal, Saffron)',
+        'Clay Masks & Face Packs',
+        'Scrubs & Exfoliators',
+        'Toners & Mists',
+        'Sunscreens (Herbal SPF)'
+      ],
+      hairCare: [
+        'Herbal Hair Oils (Onion, Bhringraj, Amla, Hibiscus)',
+        'Hair Serums & Leave-In Conditioners',
+        'Shampoos (Anti-Dandruff, Anti-Hairfall, Nourishing)',
+        'Hair Masks & Conditioners'
+      ],
+      bodyCare: [
+        'Body Lotions & Butters',
+        'Body Scrubs & Polishes',
+        'Massage Oils',
+        'Herbal Soaps (Glycerin, Charcoal, Sandalwood, Turmeric)',
+        'Bath Gels & Shower Creams'
+      ],
+      specialized: [
+        'Under-Eye Creams & Serums',
+        'Lip Balms & Lip Scrubs',
+        'Foot & Hand Creams',
+        'Stretch Mark & Pigmentation Care',
+        'Baby Care & Sensitive Skin Range',
+        'Beard Oils & Men\'s Grooming Essentials'
+      ],
+      trending: [
+        'Ayurvedic Luxury Skincare Line',
+        'Eco-Friendly & Sustainable Packaging Series',
+        'Sulphate-Free, Paraben-Free, Silicone-Free Range',
+        'Clinical-Grade Herbal Actives for Modern Consumers'
+      ]
+    }
   },
 
   legalPages: {
@@ -310,7 +590,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         description: "Our Ayurvedic Medicines are designed to promote overall health and prosperity.",
         shop_title: 'Embrace the wisdom of ancient healing.',
         shop_description: 'Showing 1–9 of 27 results',
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=1200&h=600&fit=crop'
+        image: '/healthcarebanner.png'
       },
       'personal-care': {
         name: 'Personal Care',
@@ -318,7 +598,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         description: 'Enter the realm of self-care with Ivy Herbals, where nature meets luxury and science supports beauty.',
         shop_title: 'Unwind, Renew, and Radiate with Us.',
         shop_description: 'Natural beauty products for radiant skin and healthy hair',
-        image: 'https://images.unsplash.com/photo-1556228720-195a672e8a03?w=1200&h=600&fit=crop',
+        image: '/Personal Care Category Banner.png',
         subcategories: [
           { name: 'Hair care', products: ['kesh-vardhak'] },
           { name: 'Face care', products: [] },
@@ -331,7 +611,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         description: "We only utilize the best, purest components in our formulas at Ivy Herbals.",
         shop_title: 'Nourish your Body, from the Inside Out.',
         shop_description: 'Premium nutritional supplements for optimal health',
-        image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1200&h=600&fit=crop',
+        image: '/Food Supplements Category Banner.png',
         subcategories: [
           { name: 'Protein Powder', products: [] },
           { name: 'Juices', products: [] }
@@ -343,7 +623,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         description: 'Introducing our premium feed supplements - the perfect solution to keep your livestock, pets, and animals happy and healthy.',
         shop_title: 'Experience the Power of Balanced Nutrition.',
         shop_description: 'Showing 1–9 of 15 results',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&h=600&fit=crop',
+        image: '/Feed Supplements Category Banner.png',
         subcategories: ['Cattle', 'Poultry', 'Pets']
       }
     },
@@ -355,84 +635,84 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         type: 'Syrup', 
         category: 'health-care',
         description: 'Ayurvedic syrup for holistic wellness and vitality.',
-        image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'dermiglo': { 
         name: 'Dermiglo', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Natural syrup for healthy, glowing skin from within.',
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'feromin': { 
         name: 'Feromin', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Iron-rich Ayurvedic formulation for energy and vitality.',
-        image: 'https://images.unsplash.com/photo-1550572017-4a35f5b6e2e0?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'gastrex': { 
         name: 'Gastrex', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Digestive health support with natural Ayurvedic herbs.',
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'herbonidhi': { 
         name: 'Herbonidhi', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Comprehensive Ayurvedic wellness syrup.',
-        image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'i-liv': { 
         name: 'I-Liv', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Liver health support with powerful Ayurvedic herbs.',
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'kidnee': { 
         name: 'Kidnee', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Natural kidney health support formulation.',
-        image: 'https://images.unsplash.com/photo-1550572017-4a35f5b6e2e0?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'movement': { 
         name: 'Movement', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Joint and mobility support for active living.',
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'robuston': { 
         name: 'Robuston', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Strength and vitality booster for overall wellness.',
-        image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'subacid': { 
         name: 'Subacid', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Acidity relief and digestive comfort formula.',
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'leucovy': { 
         name: 'Leucovy', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Women\'s health and wellness support.',
-        image: 'https://images.unsplash.com/photo-1550572017-4a35f5b6e2e0?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'glycof': { 
         name: 'Glycof', 
         type: 'Syrup', 
         category: 'health-care',
         description: 'Blood sugar management support formula.',
-        image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=800&fit=crop'
+        image: '/Ayurvedic Syrups.png'
       },
       'rudransh': { 
         name: 'Rudransh', 
@@ -449,7 +729,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         ingredients: ['Ashwagandha', 'Shatavari', 'Guduchi', 'Amalaki', 'Haritaki'],
         usage: 'Take 1-2 teaspoons twice daily with warm water or milk, or as directed by a healthcare professional.',
         packaging: ['100g', '250g', '500g'],
-        image: 'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=800&h=800&fit=crop'
+        image: '/Herbal Powders.png'
       },
       'cholesto-free': { 
         name: 'Cholesto Free', 
@@ -466,7 +746,7 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         ingredients: ['Arjuna', 'Guggul', 'Triphala', 'Garlic extract'],
         usage: 'Take 1 teaspoon twice daily with warm water before meals.',
         packaging: ['100g', '200g'],
-        image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&h=800&fit=crop'
+        image: '/Herbal Powders.png'
       },
       'expeller': { 
         name: 'Expeller', 
@@ -483,21 +763,21 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         ingredients: ['Triphala', 'Isabgol', 'Senna', 'Fennel'],
         usage: 'Take 1-2 teaspoons at bedtime with warm water.',
         packaging: ['100g', '200g'],
-        image: 'https://images.unsplash.com/photo-1603899122634-f086ca5f5ddd?w=800&h=800&fit=crop'
+        image: '/Herbal Powders.png'
       },
       'movement-oil': { 
         name: 'Movement Oil', 
         type: 'Oil', 
         category: 'health-care',
         description: 'Ayurvedic oil for joint and muscle relief.',
-        image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=800&h=800&fit=crop'
+        image: '/Herbal Oils.png'
       },
       'kesh-vardhak': { 
         name: 'Kesh Vardhak', 
         type: 'Oil', 
         category: 'health-care',
         description: 'Traditional hair oil for strong, lustrous hair growth.',
-        image: 'https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=800&h=800&fit=crop'
+        image: '/Herbal Oils.png'
       },
 
       // Feed Supplements
@@ -520,91 +800,91 @@ If you have any questions about our Returns and Refunds Policy, please contact u
         ],
         storage: 'Store at room temperature. Do not refrigerate or freeze. Protect from light and moisture.',
         packaging: ['120 ml', '500 ml', '1L'],
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'i-min-super-forte': { 
         name: 'I-Min Super Forte', 
         type: 'Powder', 
         category: 'feed-supplements',
         description: 'Complete mineral supplement for optimal animal health.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'livoboon-h': { 
         name: 'LivoBoon-H', 
         type: 'Liquid', 
         category: 'feed-supplements',
         description: 'Liver health support for livestock and poultry.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'microcal': { 
         name: 'Microcal', 
         type: 'Gel', 
         category: 'feed-supplements',
         description: 'Calcium supplement for strong bones and milk production.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'microcal-ad3-gold': { 
         name: 'Microcal AD3 Gold', 
         type: 'Liquid', 
         category: 'feed-supplements',
         description: 'Premium calcium with vitamins for enhanced animal health.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'neo-clean': { 
         name: 'Neo-Clean', 
         type: 'Liquid', 
         category: 'feed-supplements',
         description: 'Detoxification and cleansing support for animals.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'next-h': { 
         name: 'Next-H', 
         type: 'Liquid', 
         category: 'feed-supplements',
         description: 'Complete health supplement for livestock.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       },
       'glowmin': { 
         name: 'Glowmin', 
         type: 'Powder', 
         category: 'feed-supplements',
         description: 'Mineral and vitamin supplement for healthy animals.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'protec-y': { 
         name: 'Protec-Y', 
         type: 'Powder & Bolus', 
         category: 'feed-supplements',
         description: 'Protection and immunity support for livestock.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'milano': { 
         name: 'Milano', 
         type: 'Bolus', 
         category: 'feed-supplements',
         description: 'Comprehensive health bolus for cattle.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'e-fast': { 
         name: 'E-Fast', 
         type: 'Powder', 
         category: 'feed-supplements',
         description: 'Energy and performance supplement for animals.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'i-malt': { 
         name: 'I-Malt', 
         type: 'Powder', 
         category: 'feed-supplements',
         description: 'Malt-based nutrition supplement for animals.',
-        image: 'https://images.unsplash.com/photo-1628352081506-83c43123ed6d?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - Powders.png'
       },
       'i-vit': { 
         name: 'I-Vit', 
         type: 'Liquid', 
         category: 'feed-supplements',
         description: 'Complete vitamin supplement for livestock health.',
-        image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800&h=800&fit=crop'
+        image: '/Feed Supplements - liquids.png'
       }
     }
   }

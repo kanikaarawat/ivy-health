@@ -26,22 +26,37 @@ export default function Navbar() {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`hidden lg:fixed lg:block top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-lg shadow-sm border-b border-border'
-          : 'bg-white'
+          ? 'bg-white/80 backdrop-blur-xl shadow-2xl border-b border-primary/10'
+          : 'bg-white/60 backdrop-blur-md'
       }`}
+      style={{
+        backdropFilter: scrolled ? 'blur(20px) saturate(180%)' : 'blur(10px)'
+      }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-white font-bold text-xl">I</span>
-            </div>
-            <div>
-              <span className="font-bold text-xl text-primary">Ivy Herbals</span>
-            </div>
+          {/* Logo with Enhanced Animation */}
+          <Link to="/" className="flex items-center group relative">
+            <motion.div
+              whileHover={{ scale: 1.1, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <img 
+                src="/logo.png" 
+                alt="Ivy Herbals Logo" 
+                className="h-14 w-auto drop-shadow-lg"
+              />
+            </motion.div>
+            {/* Glow Effect on Hover */}
+            <motion.div
+              className="absolute inset-0 bg-primary/20 rounded-full blur-xl"
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileHover={{ opacity: 1, scale: 1.2 }}
+              transition={{ duration: 0.3 }}
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -100,7 +115,7 @@ export default function Navbar() {
           <div className="hidden lg:block">
             <Link
               to="/contact"
-              className="px-6 py-2.5 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-all"
+              className="px-6 py-2.5 bg-primary text-white rounded-full font-medium hover:bg-primary/90 transition-colors"
             >
               Contact Us
             </Link>

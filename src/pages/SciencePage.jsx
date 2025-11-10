@@ -96,7 +96,7 @@ export default function SciencePage() {
             className="rounded-2xl overflow-hidden shadow-2xl"
           >
             <img
-              src="https://images.unsplash.com/photo-1582719471137-c3967ffb1c42?w=800&h=600&fit=crop"
+              src="/aboutpageoverviewimage.png"
               alt="Research Laboratory"
               className="w-full h-[500px] object-cover"
             />

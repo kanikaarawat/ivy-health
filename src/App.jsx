@@ -7,6 +7,8 @@ import { useLocation } from 'react-router-dom';
 // Layout Components
 import Navbar from './components/global/Navbar';
 import MegaFooter from './components/global/MegaFooter';
+import BottomNavigation from './components/mobile/BottomNavigation';
+import MobileHeader from './components/mobile/MobileHeader';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -36,8 +38,13 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen flex flex-col">
+        {/* Desktop Navbar */}
         <Navbar />
-        <main className="flex-grow">
+        
+        {/* Mobile Header */}
+        <MobileHeader />
+        
+        <main className="flex-grow pb-20 lg:pb-0">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
@@ -51,7 +58,14 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
-        <MegaFooter />
+        
+        {/* Desktop Footer - Hidden on Mobile */}
+        <div className="hidden lg:block">
+          <MegaFooter />
+        </div>
+        
+        {/* Mobile-Only Components */}
+        <BottomNavigation />
       </div>
     </Router>
   );
