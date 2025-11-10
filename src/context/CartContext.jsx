@@ -1,7 +1,6 @@
 // src/context/CartContext.jsx
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { triggerShoppingBag, triggerHeartExplosion, triggerSadRemoval } from '../components/animations/MicroInteractions';
 
 const CartContext = createContext();
 
@@ -52,6 +51,7 @@ export function CartProvider({ children }) {
     } else {
       setCart([...cart, { ...product, quantity: 1 }]);
       // Trigger shopping bag animation
+      const { triggerShoppingBag } = require('../components/animations/MicroInteractions');
       triggerShoppingBag();
       toast.success('Added to cart!', {
         icon: '🛒',
@@ -62,14 +62,13 @@ export function CartProvider({ children }) {
 
   const removeFromCart = (productId) => {
     setCart(cart.filter(item => item.id !== productId));
-    // Trigger sad animation - crying face and broken heart
-    triggerSadRemoval();
+    // Toast notification only (animation triggered from button)
     toast('Removed from cart', {
-      icon: '😢',
+      icon: '🗑️',
       duration: 2000,
       style: {
-        background: '#F1F5F9',
-        color: '#475569',
+        background: '#1E293B',
+        color: '#fff',
       },
     });
   };
@@ -97,6 +96,7 @@ export function CartProvider({ children }) {
     }
     setWishlist([...wishlist, product]);
     // Trigger heart explosion
+    const { triggerHeartExplosion } = require('../components/animations/MicroInteractions');
     triggerHeartExplosion();
     toast.success('Added to wishlist!', {
       icon: '❤️',
