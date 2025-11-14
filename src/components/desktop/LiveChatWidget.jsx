@@ -72,7 +72,7 @@ export default function LiveChatWidget() {
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 className="font-bold">Ivy Herbals Support</h3>
+                  <h3 className="font-bold text-white/80">Ivy Herbals Support</h3>
                   <p className="text-xs text-white/80">Online now</p>
                 </div>
               </div>

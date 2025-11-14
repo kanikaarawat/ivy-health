@@ -5,7 +5,7 @@ export const content = {
     phone: '+91 928 691 2529',
     address: 'Green Land Complex, Dehradun Road, Saharanpur, Uttar Pradesh, 247001',
     hours: 'Mon - Sat, 09:00 am - 06:00 pm',
-    copyright: '© 2024 Ivy Herbals. All Rights Reserved.',
+    copyright: '© 2025 Ivy Herbals. All Rights Reserved.',
     certifications: ['ISO Certified', 'HACCP Certified', 'GMP Certified', 'AYUSH Certified'],
     tagline: 'Ivy Herbals - Growing the Ivy Way',
     brandTagline: 'Your Brand, Backed by Ivy.'
