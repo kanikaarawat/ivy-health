@@ -25,7 +25,144 @@ export const content = {
       yearsOfExcellence: '23+',
       formulations: '200+',
       businessClients: '500+',
-      description: 'At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.'
+      description: 'At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.',
+      manufacturingDivisions: [
+        'Tablets Section',
+        'Capsules Section',
+        'Powders (Churna) Section',
+        'Liquids & Syrups Section',
+        'Avale / Lehya Section'
+      ],
+      about: {
+        title: 'About Ivy Herbals, 23+ Years in Ayurveda',
+        intro: 'At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.',
+        body: 'With decades of expertise and a commitment to excellence, we\'ve become a trusted partner for private labeling, customized formulations, and complete product development solutions. From concept to creation, we help Ayurvedic brands transform ideas into impactful wellness products that resonate with today\'s lifestyle and values. Our state-of-the-art facility operates under globally recognized certifications, ensuring purity, consistency, and compliance at every stage.',
+        vision: {
+          title: 'Our Vision',
+          text: 'To become a globally respected Ayurvedic manufacturing partner, known for preserving classical Ayurvedic integrity while delivering products that meet modern quality, safety, and regulatory expectations. We envision Ivy Herbals as a benchmark for authentic, compliant, and innovation-led Ayurveda, where tradition and science work in harmony to improve human health.'
+        },
+        mission: {
+          title: 'Our Mission',
+          points: [
+            'To manufacture high-quality, AYUSH-compliant Ayurvedic products with consistency and integrity',
+            'To empower brands through custom formulations, private labeling, and end-to-end manufacturing support',
+            'To uphold classical Ayurvedic principles without compromising on modern quality standards',
+            'To continuously evolve through safe, tested, and scientifically aligned herbal formulations',
+            'To promote ethical sourcing, sustainable practices, and responsible healthcare solutions'
+          ]
+        },
+        values: [
+          {
+            title: 'Quality First',
+            description: 'Quality is the soul of Ayurveda. Every formulation undergoes strict raw material authentication, in-process checks, and batch-wise quality evaluation to ensure purity, potency, and consistency.'
+          },
+          {
+            title: 'Tradition with Precision',
+            description: 'We honor classical Ayurvedic texts while applying process control, documentation, and testing to ensure reproducible results and regulatory acceptance.'
+          },
+          {
+            title: 'Integrity & Transparency',
+            description: 'From herb sourcing to batch records and regulatory documentation, we operate with complete transparency, building long-term trust with our partners.'
+          },
+          {
+            title: 'Responsibility & Sustainability',
+            description: 'We support ethical herb sourcing, environmentally responsible processes, and sustainable packaging, aligned with the principles of holistic wellness.'
+          }
+        ],
+        certifications: [
+          'AYUSH Certified Facility – Classical and proprietary Ayurvedic manufacturing',
+          'GMP Certified – Assured hygiene, safety, and process consistency',
+          'ISO Certified – Robust quality management systems',
+          'HACCP Certified – Contamination prevention and controlled processing',
+          'Batch-wise COA & Documentation',
+          'Compliance with AYUSH Regulations'
+        ],
+        journey: 'With over two decades of manufacturing excellence, Ivy Herbals has evolved from a formulation-driven enterprise into a multi-division manufacturing partner, trusted by 500+ brands worldwide. Our Ayurvedic division stands at the intersection of classical Ayurvedic wisdom, modern process-controlled manufacturing, scalable infrastructure, and regulatory-ready documentation.'
+      },
+      science: {
+        title: 'Research & Development',
+        subtitle: 'Where Classical Ayurveda Meets Modern Science',
+        intro: 'At Ivy Herbals, Research & Development forms the foundation of our Ayurvedic manufacturing excellence. Our in-house R&D team integrates classical Ayurvedic knowledge, authenticated herbal actives, and modern scientific validation to develop formulations that are safe, effective, compliant, and market-ready.',
+        expertise: [
+          {
+            title: 'Classical & Proprietary Formulation Expertise',
+            description: 'Development of formulations based on Ayurvedic texts as well as custom proprietary blends for modern healthcare needs.'
+          },
+          {
+            title: 'Authentic Herb Selection & Validation',
+            description: 'Use of properly identified, authenticated, and tested raw herbs to ensure purity, potency, and efficacy.'
+          },
+          {
+            title: 'Traditional Knowledge + Scientific Validation',
+            description: 'Ayurvedic principles supported by process control, documentation, and safety evaluation.'
+          },
+          {
+            title: 'Stability, Safety & Quality Evaluation',
+            description: 'Batch-wise quality checks, stability assessment, and safety validation in line with AYUSH and GMP norms.'
+          },
+          {
+            title: 'Dosage Form Optimization',
+            description: 'Expertise across tablets, capsules, syrups, churna, avaleh, oils, and ghrita for optimal therapeutic delivery.'
+          },
+          {
+            title: 'Regulatory-Ready Formulations',
+            description: 'Complete documentation support for AYUSH licensing, product approval, and labeling compliance.'
+          }
+        ]
+      },
+      process: {
+        steps: [
+          {
+            number: '01',
+            title: 'Decide the Product Form',
+            description: 'Choose from our diverse range of Ayurvedic dosage forms - tablets, capsules, powders, liquids and avale.',
+            guidance: 'We\'ll guide you through what suits your brand vision best.'
+          },
+          {
+            number: '02',
+            title: 'Formulation Development',
+            description: 'Choose from our ready-to-market formulations or create a custom blend with our experienced Ayurvedic formulators.',
+            guidance: 'We ensure scientific validation and authentic sourcing of ingredients.'
+          },
+          {
+            number: '03',
+            title: 'Packaging Selection',
+            description: 'From minimalist jars to premium metallic cartons, we provide trend-driven packaging solutions that align with your brand identity.',
+            guidance: 'Design assistance and mockups are also available on request.'
+          },
+          {
+            number: '04',
+            title: 'Final Production & Delivery',
+            description: 'Once approved, production begins under strict quality checks.',
+            guidance: 'Every batch is lab-tested, documented and securely packed for shipment.'
+          }
+        ],
+        bonus: {
+          title: 'Branding & Regulatory Support',
+          description: 'We help you with label design, ingredient justification, and compliance under AYUSH & FSSAI norms.'
+        },
+        moq: {
+          title: 'MOQ & Timelines',
+          description: 'Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.',
+          note: 'Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection. Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.'
+        },
+        packaging: {
+          title: 'Packaging Excellence',
+          subtitle: 'We don\'t just manufacture products. We create brand experiences.',
+          options: [
+            'HDPE / PET bottles & jars',
+            'Glass jars & bottles',
+            'Blister packs & Alu-Alu packs',
+            'Stick packs & sachets',
+            'Premium paper boxes & cartons',
+            'Airless pumps & tubes',
+            'Custom color jars & foiling options',
+            'Eco-friendly refill packs',
+            'Custom label printing & color-coded caps'
+          ],
+          description: 'We ensure compatibility, safety, and aesthetic appeal in every pack.'
+        }
+      }
     },
     feed: {
       name: 'Animal Feed Supplements',
@@ -39,7 +176,140 @@ export const content = {
       yearsOfExcellence: '23+',
       formulations: '250+',
       businessClients: '700+',
-      description: 'We combine scientific formulation with on-ground farming insight to deliver high-quality, reliable animal feed supplements.'
+      description: 'We combine scientific formulation with on-ground farming insight to deliver high-quality, reliable animal feed supplements.',
+      manufacturingDivisions: [
+        'Powder Section',
+        'Liquid Section',
+        'Granules Section',
+        'Bolus Section'
+      ],
+      about: {
+        title: 'About Us',
+        subtitle: 'Rooted in Ayurveda. Strengthened by Nutrition Science.',
+        intro: 'At Ivy Herbals, our Animal Nutrition & Feed Supplements Division was founded on a simple yet powerful belief: Healthy animals are the foundation of a healthy food system and true animal health begins with balanced nutrition.',
+        body: 'Inspired by the timeless wisdom of Ayurveda and reinforced by modern veterinary and nutrition science, we manufacture safe, effective, and performance-driven feed supplements for poultry, livestock, aqua, pets, and specialty animal segments. What began as a commitment to herbal animal wellness has evolved into a comprehensive animal nutrition manufacturing ecosystem, supporting integrators, feed brands, veterinarians, exporters, and progressive farmers across India and global markets.',
+        vision: {
+          title: 'Our Vision',
+          text: 'To become a globally trusted animal nutrition manufacturing partner, recognized for combining Ayurvedic wisdom, nutritional science, and performance-based formulations to improve animal health, productivity, and sustainability. We envision Ivy Herbals as a benchmark for ethical, compliant, and innovation-driven animal nutrition, where natural balance and scientific precision work together to support modern farming systems.'
+        },
+        mission: {
+          title: 'Our Mission',
+          points: [
+            'To manufacture high-quality, compliant feed supplements with consistent performance',
+            'To empower brands through custom formulations, private labeling, and end-to-end manufacturing support',
+            'To integrate herbal actives with modern nutritional science for measurable on-farm results',
+            'To ensure batch-to-batch consistency, safety, and scalability',
+            'To promote ethical sourcing, responsible nutrition, and sustainable animal health solutions'
+          ]
+        },
+        values: [
+          {
+            title: 'Quality First',
+            description: 'Quality is the backbone of animal nutrition. Every formulation undergoes raw material authentication, in-process checks, stability evaluation, and batch-wise quality control to ensure safety, efficacy, and consistent performance.'
+          },
+          {
+            title: 'Tradition with Performance Precision',
+            description: 'We apply Ayurvedic principles alongside nutritional balancing, dosage accuracy, and process control to deliver reliable results across diverse farming conditions.'
+          },
+          {
+            title: 'Integrity & Transparency',
+            description: 'From ingredient sourcing and formulation logic to documentation and compliance, we operate with complete transparency, building long-term trust with brands and farmers alike.'
+          },
+          {
+            title: 'Responsibility & Sustainability',
+            description: 'We support ethical raw material sourcing, environmentally responsible manufacturing, and sustainable nutrition practices, aligned with the future of animal agriculture.'
+          }
+        ],
+        certifications: [
+          'GMP Certified – Assured hygiene, safety, and process consistency',
+          'ISO Certified – Robust quality management systems',
+          'HACCP Certified – Controlled processes and contamination prevention',
+          'AYUSH-Aligned Herbal Inputs – For herbal and natural feed formulations',
+          'Batch-wise COA & Technical Documentation',
+          'FSSAI / State Feed Authority Compliance (where applicable)'
+        ],
+        journey: 'With over two decades of manufacturing excellence, Ivy Herbals has evolved from a formulation-driven enterprise into a multi-division manufacturing partner, trusted by 500+ brands worldwide. Our Animal Nutrition Division stands at the intersection of Ayurvedic & herbal animal wellness, modern feed formulation science, scalable process-controlled infrastructure, and regulatory-ready documentation and traceability.'
+      },
+      science: {
+        title: 'Research & Development',
+        subtitle: 'Where Ayurvedic Wisdom Meets Modern Nutrition Science',
+        intro: 'At Ivy Herbals, Research & Development is the backbone of our Animal Nutrition manufacturing excellence. Our in-house R&D team integrates Ayurvedic principles, functional herbal actives, nutritional science, and performance-based validation to develop safe, effective, compliant, and farm-ready feed supplements.',
+        expertise: [
+          {
+            title: 'Segment-Specific Formulation Expertise',
+            description: 'Customized nutrition solutions for poultry, ruminants, aqua, pets, equine, and swine, designed around growth stage, production goals, and environmental conditions.'
+          },
+          {
+            title: 'Herbal Actives + Nutrition Science Integration',
+            description: 'Synergistic use of Ayurvedic herbs, vitamins, minerals, amino acids, enzymes, probiotics, and functional additives for enhanced bioavailability and performance.'
+          },
+          {
+            title: 'Ingredient Authentication & Performance Validation',
+            description: 'Strict raw material identification, quality testing, and functional validation to ensure safety, consistency, and efficacy.'
+          },
+          {
+            title: 'Stability, Safety & Quality Evaluation',
+            description: 'Batch-wise quality checks, stability assessment, and safety evaluation in accordance with GMP, HACCP, and feed regulatory norms.'
+          },
+          {
+            title: 'Dosage Form & Delivery Optimization',
+            description: 'Expertise across powders, granules, liquids, premixes, boluses, and water-soluble formulations for efficient intake and on-farm application.'
+          },
+          {
+            title: 'Regulatory-Ready Formulations',
+            description: 'Complete technical documentation support including composition sheets, COA, labels, and statutory compliance for domestic and export markets.'
+          }
+        ]
+      },
+      process: {
+        steps: [
+          {
+            number: '01',
+            title: 'Decide the Product Form',
+            description: 'Choose from our specialized formats — Bolus, Powders, or Liquids.',
+            guidance: 'Our experts guide you to select the best form for your animal segment and market focus.'
+          },
+          {
+            number: '02',
+            title: 'Formulation Development',
+            description: 'Select from our proven formulations or customize one for your brand',
+            guidance: 'Backed by veterinarians and field-tested ingredient combinations for measurable results'
+          },
+          {
+            number: '03',
+            title: 'Packaging Selection',
+            description: 'From durable HDPE jars to stylish pouches and sachets — we provide functional, market-ready, and premium packaging',
+            guidance: 'Label design and mockups are available on request.'
+          },
+          {
+            number: '04',
+            title: 'Final Production & Delivery',
+            description: 'Production begins only after formula and packaging approval.',
+            guidance: 'Each batch undergoes strict QA, documentation, and safe delivery protocols.'
+          }
+        ],
+        bonus: {
+          title: 'Branding & Regulatory Support',
+          description: 'We assist in label design, ingredient documentation and regulatory compliance (AYUSH, BIS & export requirements).'
+        },
+        moq: {
+          title: 'MOQ & Timelines',
+          description: 'Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.',
+          note: 'Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection. Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.'
+        },
+        packaging: {
+          title: 'Packaging Excellence',
+          subtitle: 'We don\'t just manufacture products. we package your identity.',
+          options: [
+            'HDPE / PET bottles & jars',
+            'Alu-Alu / Blister packs',
+            'Foils sachets & pouches',
+            'Custom label printing & colour-coded caps',
+            'Bulk & export-grade containers'
+          ],
+          description: 'Aesthetic, durable, and farm-friendly.'
+        }
+      }
     },
     cosmetics: {
       name: 'Cosmetics & Personal Care',
@@ -53,7 +323,146 @@ export const content = {
       yearsOfExcellence: '23+',
       formulations: '70+',
       businessClients: '100+',
-      description: 'We unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.'
+      description: 'We unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.',
+      manufacturingDivisions: [
+        'Creams & Lotions Section',
+        'Oils & Serums Section',
+        'Face Wash & Gels Section',
+        'Hair Care Section',
+        'Soap & Cleansing Bar Section',
+        'Body Care & Scrub Section'
+      ],
+      about: {
+        title: 'About Us',
+        subtitle: 'Rooted in Ayurveda. Strengthened by Science.',
+        intro: 'At Ivy Herbals, our cosmetic division was born from a simple yet powerful belief: nature and science work best together.',
+        body: 'Rooted in India\'s rich Ayurvedic heritage and strengthened by modern cosmetic science, we create high-performance skincare, haircare, and personal care products for brands that value purity, efficacy, and consistency. What began as a commitment to authentic herbal formulations has evolved into a full-scale cosmetic manufacturing ecosystem, supporting startups, D2C brands, dermatology-inspired labels, and premium beauty houses across India and international markets.',
+        vision: {
+          title: 'Our Vision',
+          text: 'To become a globally trusted cosmetic manufacturing partner, known for blending Ayurvedic wisdom with advanced cosmetic science, while enabling brands to create products that are clean, effective, and future-ready. We envision Ivy Herbals as a symbol of quality-led growth, where innovation, sustainability, and transparency define every formulation we produce.'
+        },
+        mission: {
+          title: 'Our Mission',
+          points: [
+            'To deliver high-quality, compliant, and reliable cosmetic manufacturing solutions',
+            'To empower brands through custom formulations, private labeling, and end-to-end support',
+            'To maintain global quality standards without compromising on natural integrity',
+            'To continuously innovate with safe, dermatologically tested, and trend-aligned products',
+            'To support sustainable practices in sourcing, production, and packaging'
+          ]
+        },
+        values: [
+          {
+            title: 'Quality First',
+            description: 'Quality is not a checkpoint — it is our foundation. Every formulation undergoes stringent quality control, microbial testing, and stability evaluation to ensure safety, performance, and consistency.'
+          },
+          {
+            title: 'Innovation with Purpose',
+            description: 'We innovate responsibly by combining herbal actives, clinical ingredients, and modern delivery systems to meet evolving consumer demands without compromising safety.'
+          },
+          {
+            title: 'Integrity & Transparency',
+            description: 'From ingredient sourcing to documentation and compliance, we operate with complete honesty and clarity — building long-term partnerships, not just transactions.'
+          },
+          {
+            title: 'Sustainability & Responsibility',
+            description: 'We actively promote eco-friendly formulations, sustainable packaging options, and ethical manufacturing practices, aligned with the future of conscious beauty.'
+          }
+        ],
+        certifications: [
+          'GMP Certified – Assured manufacturing hygiene, safety, and consistency',
+          'ISO Certified – Robust documentation and quality management systems',
+          'HACCP Certified – Controlled processes for contamination prevention',
+          'AYUSH Certified – Authentic herbal and Ayurvedic formulation base',
+          'Dermatologically Tested & Paraben-Free Certification – Available on request',
+          'Compliance with BIS & Cosmetic Rules, 2020'
+        ],
+        journey: 'With over two decades of manufacturing excellence, Ivy Herbals has grown from a formulation-focused enterprise into a multi-division manufacturing partner trusted by over 100+ brands worldwide. Our cosmetic division represents the perfect balance of traditional herbal wisdom, advanced cosmetic R&D, scalable infrastructure, and design-forward packaging support.'
+      },
+      science: {
+        title: 'Research & Development',
+        subtitle: 'Where Nature Meets Cosmetic Science',
+        intro: 'At Ivy Herbals, Research & Development is the backbone of our cosmetic manufacturing excellence. Our in-house R&D team blends Ayurvedic wisdom, herbal actives, and modern cosmetic science to create formulations that are safe, effective, stable, and market-ready.',
+        expertise: [
+          {
+            title: 'Custom Formulation Expertise',
+            description: 'Tailor-made solutions across skincare, haircare, body care, baby care, and men\'s grooming.'
+          },
+          {
+            title: 'Herbal + Clinical Ingredient Integration',
+            description: 'Ayurvedic extracts combined with science-backed actives for enhanced efficacy.'
+          },
+          {
+            title: 'Stability & Safety Testing',
+            description: 'Microbial testing, compatibility checks, and stability studies as per BIS norms.'
+          },
+          {
+            title: 'Texture, Fragrance & Sensory Customization',
+            description: 'Complete control over feel, aroma, appearance, and performance.'
+          },
+          {
+            title: 'Trend-Driven Product Development',
+            description: 'Clean beauty, sulphate-free, paraben-free, silicone-free, and eco-conscious ranges.'
+          },
+          {
+            title: 'Regulatory-Ready Formulations',
+            description: 'Documentation support for AYUSH, BIS, and Cosmetic Rules, 2020.'
+          }
+        ]
+      },
+      process: {
+        steps: [
+          {
+            number: '01',
+            title: 'Decide the Product Form',
+            description: 'Select from our diverse portfolio — creams, lotions, gels, serums, oils, soaps, and more.',
+            guidance: 'We guide you toward textures and actives that match your brand goals.'
+          },
+          {
+            number: '02',
+            title: 'Formulation Development',
+            description: 'Choose from our existing tested formulations or create a unique product with our in-house R&D team.',
+            guidance: 'Herbal actives blended with science-backed stability and safety testing.'
+          },
+          {
+            number: '03',
+            title: 'Packaging Selection',
+            description: 'From eco-friendly jars to premium airless pumps and frosted bottles, we offer packaging that defines your brand.',
+            guidance: 'Label, logo, and design mockup support available.'
+          },
+          {
+            number: '04',
+            title: 'Final Production & Delivery',
+            description: 'Manufacturing begins post-approval under stringent quality and microbial checks.',
+            guidance: 'Each batch is dermatologically tested (optional) and delivered with full documentation.'
+          }
+        ],
+        bonus: {
+          title: 'Branding & Regulatory Support',
+          description: 'We assist with label design, ingredient declaration, and compliance under AYUSH, BIS, and Cosmetic Rules 2020.'
+        },
+        moq: {
+          title: 'MOQ & Timelines',
+          description: 'Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.',
+          note: 'Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection. Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.'
+        },
+        packaging: {
+          title: 'Packaging Excellence',
+          subtitle: 'We don\'t just manufacture products. We create brand experiences.',
+          options: [
+            'HDPE / PET bottles & jars',
+            'Glass jars & bottles',
+            'Blister packs & Alu-Alu packs',
+            'Stick packs & sachets',
+            'Premium paper boxes & cartons',
+            'Airless pumps & tubes',
+            'Custom color jars & foiling options',
+            'Eco-friendly refill packs',
+            'Custom label printing & color-coded caps'
+          ],
+          description: 'We offer aesthetic, functional, and trend-aligned packaging options to elevate your brand\'s shelf presence.'
+        }
+      }
     }
   },
 

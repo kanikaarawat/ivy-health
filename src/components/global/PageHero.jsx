@@ -1,10 +1,13 @@
 // src/components/global/PageHero.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useDivisionColor } from '../../hooks/useDivisionColor';
 
 export default function PageHero({ title, subtitle }) {
+  const { primary, bgPrimaryClass } = useDivisionColor();
+  
   return (
-    <div className="relative bg-primary overflow-hidden">
+    <div className={`relative ${bgPrimaryClass} overflow-hidden`} style={{ backgroundColor: primary }}>
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-white rounded-full blur-3xl" />
       </div>
@@ -20,7 +23,7 @@ export default function PageHero({ title, subtitle }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-4xl md:text-6xl font-bold text-white leading-tight"
+            className="text-h1 md:text-5xl font-primary text-white leading-tight"
           >
             {title}
           </motion.h1>

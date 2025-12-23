@@ -17,15 +17,29 @@ export default function AboutSection() {
   });
 
   const stats = [
-    { icon: Award, value: 23, label: 'Years Experience', color: 'from-primary to-primary/60', suffix: '+' },
-    { icon: Users, value: 500, label: 'Business Clients', color: 'from-accent to-accent/60', suffix: '+' },
-    { icon: TrendingUp, value: 200, label: 'Formulations', color: 'from-secondary to-accent', suffix: '+' },
-    { icon: CheckCircle, value: 5, label: 'Divisions', color: 'from-primary to-accent', suffix: '+' }
+    { 
+      icon: Award, 
+      primaryValue: 23, 
+      primaryLabel: 'Years Experience', 
+      secondaryValue: 500, 
+      secondaryLabel: 'Business Clients',
+      color: 'from-primary to-primary/60', 
+      suffix: '+' 
+    },
+    { 
+      icon: TrendingUp, 
+      primaryValue: 200, 
+      primaryLabel: 'Formulations', 
+      secondaryValue: 5, 
+      secondaryLabel: 'Divisions',
+      color: 'from-accent to-accent/60', 
+      suffix: '+' 
+    }
   ];
 
   return (
-    <AnimatedSection className="bg-gradient-to-b from-white to-cream/30">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <AnimatedSection className="bg-gradient-to-b from-white to-cream/30 py-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Left - Image with Interactive Effects */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -52,7 +66,7 @@ export default function AboutSection() {
             <motion.img
               src={about.image}
               alt="Ayurvedic Laboratory"
-              className="w-full h-[500px] object-cover"
+              className="w-full h-[300px] lg:h-[350px] object-cover"
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.6 }}
             />
@@ -86,26 +100,26 @@ export default function AboutSection() {
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="space-y-8"
+          className="space-y-4"
         >
           <div className="inline-block px-4 py-1.5 bg-primary/10 rounded-full">
             <span className="text-sm font-medium text-primary">About Us</span>
           </div>
 
-          <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary">
+          <div className="space-y-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary">
               {about.title}
             </h2>
-            <p className="text-lg text-text-light leading-relaxed">
+            <p className="text-sm md:text-base text-text-light leading-relaxed">
               {about.description}
             </p>
           </div>
 
           {/* Stats Grid with Animated Counters */}
-          <div ref={ref} className="grid grid-cols-2 gap-6">
+          <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {stats.map((stat, index) => (
               <motion.div
-                key={stat.label}
+                key={stat.primaryLabel}
                 initial={{ opacity: 0, y: 20, scale: 0.9 }}
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 viewport={{ once: true }}
@@ -119,7 +133,7 @@ export default function AboutSection() {
                   y: -10,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.15)"
                 }}
-                className="relative bg-white rounded-2xl p-8 border-2 border-primary/10 overflow-hidden group cursor-pointer"
+                className="relative bg-white rounded-2xl p-4 border-2 border-primary/10 overflow-hidden group cursor-pointer"
               >
                 {/* Animated Background Gradient */}
                 <motion.div 
@@ -128,19 +142,27 @@ export default function AboutSection() {
                 
                 {/* Icon with Animation */}
                 <motion.div
-                  className="relative z-10"
+                  className="relative z-10 mb-4"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <stat.icon className="w-10 h-10 text-primary mb-4" />
+                  <stat.icon className="w-8 h-8 text-primary" />
                 </motion.div>
                 
-                {/* Animated Counter */}
-                <div className="relative z-10">
-                  <div className="text-4xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-2">
-                    {inView && <CountUp end={stat.value} duration={2.5} delay={index * 0.2} />}{stat.suffix}
+                {/* Primary Stat */}
+                <div className="relative z-10 mb-3">
+                  <div className="text-3xl font-bold text-primary mb-1">
+                    {inView && <CountUp end={stat.primaryValue} duration={2.5} delay={index * 0.2} />}{stat.suffix}
                   </div>
-                  <div className="text-sm text-text-body font-medium">{stat.label}</div>
+                  <div className="text-xs text-text-body font-medium">{stat.primaryLabel}</div>
+                </div>
+
+                {/* Secondary Stat */}
+                <div className="relative z-10 pt-3 border-t border-primary/10">
+                  <div className="text-2xl font-bold text-primary mb-1">
+                    {inView && <CountUp end={stat.secondaryValue} duration={2.5} delay={index * 0.2 + 0.3} />}{stat.suffix}
+                  </div>
+                  <div className="text-xs text-text-body font-medium">{stat.secondaryLabel}</div>
                 </div>
 
                 {/* Hover Effect Circle */}
@@ -158,9 +180,6 @@ export default function AboutSection() {
           <div className="flex flex-wrap gap-4">
             <Button to="/about" className="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90">
               Our Story
-            </Button>
-            <Button to="/our-science" className="px-8 py-3 border-2 border-primary/20 text-primary rounded-full hover:border-primary hover:bg-primary/5">
-              Our Science
             </Button>
           </div>
         </motion.div>

@@ -5,9 +5,12 @@ import { Mail, Phone, MapPin, Clock, Send, CheckCircle, AlertCircle } from 'luci
 import PageHero from '../components/global/PageHero';
 import AnimatedSection from '../components/motion/AnimatedSection';
 import { content } from '../content/data';
+import { useDivisionColor } from '../hooks/useDivisionColor';
+import DivisionMobileTabs from '../components/mobile/DivisionMobileTabs';
 
 export default function ContactPage() {
   const { contactPage } = content;
+  const { primary, secondary } = useDivisionColor();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -90,13 +93,13 @@ export default function ContactPage() {
   };
 
   return (
-    <div>
+    <div className="pb-20 lg:pb-0">
       <PageHero title={contactPage.hero.title} />
 
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl font-bold text-primary mb-6">
+          <h2 className="text-h2 font-primary mb-6" style={{ color: primary }}>
             {contactPage.intro.title}
           </h2>
           <p className="text-xl text-text-body/80 leading-relaxed">
@@ -106,7 +109,10 @@ export default function ContactPage() {
       </AnimatedSection>
 
       {/* Contact Form & Info */}
-      <AnimatedSection className="bg-gradient-to-br from-background to-secondary/10">
+      <AnimatedSection
+        className=""
+        style={{ background: `linear-gradient(to bottom right, #FCFBF8, ${primary}0d, ${secondary}14)` }}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <motion.div
@@ -115,7 +121,7 @@ export default function ContactPage() {
             viewport={{ once: true }}
             className="bg-white p-8 rounded-2xl shadow-xl"
           >
-            <h3 className="font-serif text-2xl font-bold text-primary mb-6">
+            <h3 className="text-h3 font-primary mb-6" style={{ color: primary }}>
               Send us a Message
             </h3>
             {/* Success Message */}
@@ -163,8 +169,15 @@ export default function ContactPage() {
                         ? 'border-red-400 bg-red-50/50 focus:border-red-500'
                         : touched.name && !errors.name
                         ? 'border-green-400 bg-green-50/50 focus:border-green-500'
-                        : 'border-secondary/30 focus:border-primary'
-                    } focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                        : 'border-secondary/30'
+                    } focus:outline-none focus:ring-2`}
+                    style={
+                      errors.name && touched.name
+                        ? {}
+                        : touched.name && !errors.name
+                        ? {}
+                        : { borderColor: '#CBD5CE' }
+                    }
                     placeholder="Enter your full name"
                   />
                 </motion.div>
@@ -209,8 +222,15 @@ export default function ContactPage() {
                         ? 'border-red-400 bg-red-50/50 focus:border-red-500'
                         : touched.email && !errors.email
                         ? 'border-green-400 bg-green-50/50 focus:border-green-500'
-                        : 'border-secondary/30 focus:border-primary'
-                    } focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                        : 'border-secondary/30'
+                    } focus:outline-none focus:ring-2`}
+                    style={
+                      errors.email && touched.email
+                        ? {}
+                        : touched.email && !errors.email
+                        ? {}
+                        : { borderColor: '#CBD5CE' }
+                    }
                     placeholder="your.email@example.com"
                   />
                 </motion.div>
@@ -254,8 +274,15 @@ export default function ContactPage() {
                         ? 'border-red-400 bg-red-50/50 focus:border-red-500'
                         : touched.phone && !errors.phone
                         ? 'border-green-400 bg-green-50/50 focus:border-green-500'
-                        : 'border-secondary/30 focus:border-primary'
-                    } focus:outline-none focus:ring-2 focus:ring-primary/20`}
+                        : 'border-secondary/30'
+                    } focus:outline-none focus:ring-2`}
+                    style={
+                      errors.phone && touched.phone
+                        ? {}
+                        : touched.phone && !errors.phone
+                        ? {}
+                        : { borderColor: '#CBD5CE' }
+                    }
                     placeholder="+91 XXX XXX XXXX"
                   />
                 </motion.div>
@@ -379,7 +406,7 @@ export default function ContactPage() {
             className="space-y-8"
           >
             <div>
-              <h3 className="font-serif text-2xl font-bold text-primary mb-6">
+              <h3 className="text-h3 font-primary mb-6" style={{ color: primary }}>
                 Contact Information
               </h3>
               <div className="space-y-6">
@@ -388,7 +415,7 @@ export default function ContactPage() {
                     <Mail className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-primary mb-1">Email</h4>
+                    <h4 className="font-medium mb-1" style={{ color: primary }}>Email</h4>
                     <a href={`mailto:${contactPage.info.email}`} className="text-text-body/70 hover:text-accent transition-colors">
                       {contactPage.info.email}
                     </a>
@@ -400,7 +427,7 @@ export default function ContactPage() {
                     <Phone className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-primary mb-1">Phone</h4>
+                    <h4 className="font-medium mb-1" style={{ color: primary }}>Phone</h4>
                     <a href={`tel:${contactPage.info.phone}`} className="text-text-body/70 hover:text-accent transition-colors">
                       {contactPage.info.phone}
                     </a>
@@ -412,7 +439,7 @@ export default function ContactPage() {
                     <MapPin className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-primary mb-1">Address</h4>
+                    <h4 className="font-medium mb-1" style={{ color: primary }}>Address</h4>
                     <p className="text-text-body/70">
                       {contactPage.info.address}
                     </p>
@@ -424,7 +451,7 @@ export default function ContactPage() {
                     <Clock className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h4 className="font-medium text-primary mb-1">Hours</h4>
+                    <h4 className="font-medium mb-1" style={{ color: primary }}>Hours</h4>
                     <p className="text-text-body/70">
                       {contactPage.info.hours}
                     </p>
@@ -434,9 +461,12 @@ export default function ContactPage() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 text-center">
+            <div
+              className="rounded-2xl p-8 text-center"
+              style={{ background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)` }}
+            >
               <MapPin className="text-accent mx-auto mb-4" size={48} />
-              <h4 className="font-serif text-xl font-bold text-primary mb-2">
+              <h4 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                 Visit Our Facility
               </h4>
               <p className="text-text-body/70">
@@ -450,7 +480,7 @@ export default function ContactPage() {
       {/* Division-Specific Contacts */}
       <AnimatedSection className="bg-white">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="font-serif text-4xl font-bold text-primary mb-4">
+          <h2 className="text-h2 font-primary mb-4" style={{ color: primary }}>
             Division-Specific Contacts
           </h2>
           <p className="text-xl text-text-body/80 mb-12">
@@ -464,12 +494,21 @@ export default function ContactPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-primary/5 to-accent/5 p-8 rounded-2xl border border-primary/10"
+                className="p-8 rounded-2xl border"
+                style={{
+                  background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)`,
+                  borderColor: `${primary}1a`
+                }}
               >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Mail className="text-primary" size={32} />
+                <div
+                  className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"
+                  style={{ backgroundColor: `${primary}0d` }}
+                >
+                  <Mail style={{ color: primary }} size={32} />
                 </div>
-                <h3 className="font-bold text-xl text-primary mb-3">{division.name}</h3>
+                <h3 className="font-bold text-xl mb-3 font-primary" style={{ color: primary }}>
+                  {division.name}
+                </h3>
                 <a 
                   href={`mailto:${division.email}`}
                   className="text-accent hover:text-accent/80 transition-colors font-medium"
@@ -481,6 +520,9 @@ export default function ContactPage() {
           </div>
         </div>
       </AnimatedSection>
+
+      {/* Division Mobile Bottom Tabs (for /ayur3p/contact, /cosmo3p/contact, /feed3p/contact) */}
+      <DivisionMobileTabs />
     </div>
   );
 }

@@ -119,20 +119,6 @@ export default function MobileHero() {
             </div>
           </motion.div>
 
-          {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-          >
-            <Link
-              to="/shop"
-              className="flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-2xl font-bold shadow-xl active:scale-95 transition-transform w-full"
-            >
-              <span>Explore Products</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-          </motion.div>
         </div>
 
         {/* Subtle Bottom Border */}

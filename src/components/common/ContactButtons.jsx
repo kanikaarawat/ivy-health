@@ -17,32 +17,7 @@ export default function ContactButtons({ className = '', variant = 'floating' })
   };
 
   if (variant === 'floating') {
-    return (
-      <div className={`lg:hidden fixed bottom-24 right-4 flex flex-col gap-3 z-40 ${className}`}>
-        {/* WhatsApp Button */}
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={handleWhatsApp}
-          className="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center shadow-2xl text-white"
-        >
-          <MessageCircle className="w-6 h-6" fill="currentColor" />
-        </motion.button>
-
-        {/* Call Button */}
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ delay: 0.1 }}
-          whileTap={{ scale: 0.9 }}
-          onClick={handleCall}
-          className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center shadow-2xl text-white"
-        >
-          <Phone className="w-6 h-6" fill="currentColor" />
-        </motion.button>
-      </div>
-    );
+    return null; // Hide floating buttons on mobile
   }
 
   return (

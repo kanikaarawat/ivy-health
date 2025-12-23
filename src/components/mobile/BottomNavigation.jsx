@@ -6,6 +6,16 @@ import { Home, ShoppingBag, Building2, User, Phone } from 'lucide-react';
 
 export default function BottomNavigation() {
   const location = useLocation();
+  const pathname = location.pathname;
+
+  // Hide global bottom nav on division-specific routes where custom FAB is used
+  if (
+    pathname.startsWith('/ayur3p') ||
+    pathname.startsWith('/cosmo3p') ||
+    pathname.startsWith('/feed3p')
+  ) {
+    return null;
+  }
 
   const navItems = [
     { icon: Home, label: 'Home', path: '/' },
@@ -26,8 +36,8 @@ export default function BottomNavigation() {
         <div className="flex justify-around items-center">
           {navItems.map((item) => {
             const Icon = item.icon;
-            const isActive = location.pathname === item.path || 
-                            (item.path === '/shop' && location.pathname.includes('/shop'));
+            const isActive = pathname === item.path || 
+                            (item.path === '/shop' && pathname.includes('/shop'));
             
             return (
               <Link
