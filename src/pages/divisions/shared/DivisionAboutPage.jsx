@@ -3,8 +3,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { CheckCircle, Award, Shield, Factory } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
 
 export default function DivisionAboutPage({ division }) {
   const { about } = division;
@@ -15,11 +15,11 @@ export default function DivisionAboutPage({ division }) {
 
       {/* Intro Section */}
       <AnimatedSection className="bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-text-body/80 leading-relaxed mb-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-xl text-text-body/80 leading-relaxed mb-6 text-justify">
             {about.intro}
           </p>
-          <p className="text-lg text-text-body/70 leading-relaxed">
+          <p className="text-lg text-text-body/70 leading-relaxed text-justify">
             {about.body}
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function DivisionAboutPage({ division }) {
                   </motion.li>
                 ))}
               </ul>
-              <p className="text-text-body/70 leading-relaxed">
+              <p className="text-text-body/70 leading-relaxed text-justify">
                 {division.slug === 'ayur3p' 
                   ? 'All sections operate under independent quality monitoring and a unified supply chain, guaranteeing standardized quality and on-time delivery.'
                   : division.slug === 'feed3p'
@@ -87,13 +87,13 @@ export default function DivisionAboutPage({ division }) {
               <div className="space-y-4">
                 <div>
                   <p className="font-semibold text-text-body mb-2">Concept:</p>
-                  <p className="text-text-body/70">
+                  <p className="text-text-body/70 text-justify">
                     Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
                   </p>
                 </div>
                 <div>
                   <p className="font-semibold text-text-body mb-2">Purpose:</p>
-                  <p className="text-text-body/70">
+                  <p className="text-text-body/70 text-justify">
                     Build trust & show scale and hygiene.
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export default function DivisionAboutPage({ division }) {
             <h3 className="font-serif text-3xl font-bold text-primary mb-4">
               {about.vision.title}
             </h3>
-            <p className="text-text-body/80 leading-relaxed">
+            <p className="text-text-body/80 leading-relaxed text-justify">
               {about.vision.text}
             </p>
           </motion.div>
@@ -133,7 +133,7 @@ export default function DivisionAboutPage({ division }) {
               {about.mission.points.map((point, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-1" />
-                  <span className="text-text-body/80">{point}</span>
+                  <span className="text-text-body/80 text-justify">{point}</span>
                 </li>
               ))}
             </ul>
@@ -166,7 +166,7 @@ export default function DivisionAboutPage({ division }) {
               <h3 className="font-serif text-xl font-bold text-primary mb-2">
                 {value.title}
               </h3>
-              <p className="text-text-body/70 text-sm">
+              <p className="text-text-body/70 text-sm text-justify">
                 {value.description}
               </p>
             </motion.div>
@@ -180,7 +180,7 @@ export default function DivisionAboutPage({ division }) {
           <h2 className="font-serif text-4xl font-bold mb-4">
             Our Certifications & Compliance
           </h2>
-          <p className="text-xl text-background/90 max-w-3xl mx-auto">
+          <p className="text-xl text-background/90 max-w-3xl mx-auto text-justify">
             Our {division.name.toLowerCase()} manufacturing facility adheres to stringent quality and regulatory frameworks:
           </p>
         </div>
@@ -195,7 +195,7 @@ export default function DivisionAboutPage({ division }) {
               className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-center"
             >
               <Shield className="w-8 h-8 text-background mx-auto mb-3" />
-              <p className="text-background/90 text-sm">{cert}</p>
+              <p className="text-background/90 text-sm text-justify">{cert}</p>
             </motion.div>
           ))}
         </div>
@@ -203,11 +203,11 @@ export default function DivisionAboutPage({ division }) {
 
       {/* Journey */}
       <AnimatedSection className="bg-gradient-to-br from-background to-secondary/10">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl font-bold text-primary mb-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-4xl font-bold text-primary mb-6 text-center">
             Our Journey
           </h2>
-          <p className="text-lg text-text-body/80 leading-relaxed">
+          <p className="text-lg text-text-body/80 leading-relaxed text-justify">
             {about.journey}
           </p>
         </div>

@@ -88,14 +88,14 @@ export default function DivisionMobileTabs() {
           >
             <button
               type="button"
-              className={`w-16 min-h-[44px] px-2 py-2.5 rounded-xl font-semibold text-xs transition-all shadow-lg hover:shadow-xl flex items-center justify-center ${
+              className={`w-16 min-h-[44px] px-2 py-2.5 rounded-xl font-semibold text-xs transition-all flex items-center justify-center border ${
                 isActive(primaryTab.path)
-                  ? 'text-white ring-2 ring-offset-2'
-                  : 'text-white'
+                  ? 'text-white shadow-md ring-2 ring-offset-2'
+                  : 'text-slate-600 bg-white hover:bg-slate-50'
               }`}
               style={{
-                backgroundColor: isActive(primaryTab.path) ? primary : `${primary}cc`,
-                borderColor: primary,
+                backgroundColor: isActive(primaryTab.path) ? primary : 'white',
+                borderColor: isActive(primaryTab.path) ? primary : 'rgba(148, 163, 184, 0.3)',
                 ringColor: isActive(primaryTab.path) ? primary : 'transparent',
               }}
             >

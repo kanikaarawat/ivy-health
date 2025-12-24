@@ -3,10 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle, FlaskConical, Microscope, TestTube, Shield, Book } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
 export default function Ayur3pSciencePage() {
   const { primary, secondary } = useDivisionColor();
@@ -57,13 +57,13 @@ export default function Ayur3pSciencePage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
                 At Ivy Herbals, Research & Development forms the foundation of our Ayurvedic manufacturing excellence. Our in-house R&D team integrates classical Ayurvedic knowledge, authenticated herbal actives, and modern scientific validation to develop formulations that are safe, effective, compliant, and market-ready.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
                 We work closely with brands to create products aligned with AYUSH guidelines, therapeutic relevance, and evolving healthcare needs, ensuring every formulation maintains batch-to-batch consistency and scales seamlessly from pilot batches to commercial production.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
                 From classical reference mapping to final formulation approval, our R&D process is designed to preserve Ayurvedic integrity while meeting modern regulatory and quality expectations.
               </p>
             </motion.div>
@@ -97,7 +97,7 @@ export default function Ayur3pSciencePage() {
                     <h3 className="text-h3 mb-3 font-primary" style={{ color: primary }}>
                       {item.title}
                     </h3>
-                    <p className="text-sm lg:text-base text-text-body/70 leading-relaxed">
+                    <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">
                       {item.description}
                     </p>
                   </motion.div>
@@ -115,7 +115,7 @@ export default function Ayur3pSciencePage() {
             <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-center" style={{ color: primary }}>
               Supporting Your Brand at Every Stage
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-6 text-center">
+            <p className="text-base lg:text-lg text-text-body/80 mb-6 text-justify">
               Whether you are launching a new Ayurvedic healthcare brand or expanding an existing portfolio, our R&D team ensures:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -137,7 +137,7 @@ export default function Ayur3pSciencePage() {
                 >
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-                    <p className="text-sm lg:text-base text-text-body/80 leading-relaxed">{point}</p>
+                    <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{point}</p>
                   </div>
                 </motion.div>
               ))}
@@ -160,7 +160,7 @@ export default function Ayur3pSciencePage() {
               <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-center" style={{ color: primary }}>
                 Ready to Build Your Ayurvedic Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
                 Discover Ivy Herbals' AYUSH-compliant third-party manufacturing capabilities and see how we transform classical wisdom and modern requirements into shelf-ready Ayurvedic products.
               </p>
               
@@ -189,12 +189,12 @@ export default function Ayur3pSciencePage() {
                   <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
                   <span>View Our Ayurvedic Manufacturing Process</span>
                 </Link>
-                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7">
+                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7 text-justify">
                   Understand how we take your product from formula selection to compliant manufacturing, packaging, and delivery.
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold text-center italic" style={{ color: primary }}>
+              <p className="text-lg lg:text-xl font-bold italic text-justify" style={{ color: primary }}>
                 Your Brand. Our Ayurvedic Expertise. One Trusted Manufacturing Journey.
               </p>
             </motion.div>

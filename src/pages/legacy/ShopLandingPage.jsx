@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Package, Sparkles } from 'lucide-react';
-import { content } from '../content/data';
+import { content } from '../../content/data';
 
 export default function ShopLandingPage() {
   const { categories } = content.productData;

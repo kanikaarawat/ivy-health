@@ -2,9 +2,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Leaf, TestTube, Microscope, CheckCircle } from 'lucide-react';
-import PageHero from '../components/global/PageHero';
-import AnimatedSection from '../components/motion/AnimatedSection';
-import { content } from '../content/data';
+import PageHero from '../../components/global/PageHero';
+import AnimatedSection from '../../components/motion/AnimatedSection';
+import { content } from '../../content/data';
 
 export default function SciencePage() {
   const { sciencePage } = content;

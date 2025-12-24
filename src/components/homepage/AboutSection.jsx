@@ -110,7 +110,7 @@ export default function AboutSection() {
             <h2 className="text-2xl md:text-3xl font-bold text-primary">
               {about.title}
             </h2>
-            <p className="text-sm md:text-base text-text-light leading-relaxed">
+            <p className="text-sm md:text-base text-text-light leading-relaxed text-justify">
               {about.description}
             </p>
           </div>

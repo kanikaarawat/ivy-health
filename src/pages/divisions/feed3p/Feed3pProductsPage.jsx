@@ -3,11 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import { content } from '../../content/data';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import { content } from '../../../content/data';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
 export default function Feed3pProductsPage() {
   const division = content.divisions.feed;
@@ -65,7 +65,7 @@ export default function Feed3pProductsPage() {
           style={{ backgroundColor: `${primary}0d` }}
         >
           <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-          <p className="text-sm lg:text-base text-text-body/80 leading-relaxed">{item}</p>
+          <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{item}</p>
         </motion.div>
       ))}
     </div>
@@ -81,7 +81,7 @@ export default function Feed3pProductsPage() {
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-text-body/80 leading-relaxed">
+          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
             At Ivy Herbals, we manufacture a wide range of science-backed, herbal feed supplements
             designed to improve animal health, productivity, and farm profitability. Our
             formulations are developed to meet species-specific nutritional requirements, production
@@ -139,7 +139,7 @@ export default function Feed3pProductsPage() {
             >
               Built for Your Brand
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
+            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
               All animal nutrition product categories can be:
             </p>
 
@@ -187,8 +187,8 @@ export default function Feed3pProductsPage() {
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
               Ready to Build Your Animal Nutrition Line?
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
-              Discover Ivy Herbals’ science-backed, compliance-driven third-party manufacturing
+            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+              Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing
               capabilities for feed supplements and veterinary nutrition, where nutrition science,
               herbal actives, and performance-driven formulations come together to deliver
               farm-ready, scalable products.
@@ -205,7 +205,7 @@ export default function Feed3pProductsPage() {
               </Link>
             </div>
 
-            <p className="text-lg lg:text-xl font-bold text-center italic font-primary" style={{ color: primary }}>
+            <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
               Your Brand. Our Nutritional Expertise. One Trusted Manufacturing Journey.
             </p>
           </motion.div>

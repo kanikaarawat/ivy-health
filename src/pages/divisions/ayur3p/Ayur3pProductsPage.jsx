@@ -3,10 +3,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
 export default function Ayur3pProductsPage() {
   const { primary, secondary } = useDivisionColor();
@@ -275,7 +275,7 @@ export default function Ayur3pProductsPage() {
           className="bg-white rounded-2xl shadow-xl p-6 lg:p-8"
           style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}
         >
-          <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed">
+          <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
             {section.description}
           </p>
           <ul className="space-y-2">
@@ -306,14 +306,14 @@ export default function Ayur3pProductsPage() {
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-text-body/80 leading-relaxed">
+          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
             At Ivy Herbals, we offer a wide range of AYUSH-compliant Ayurvedic product
             categories designed to support preventive care, therapeutic needs, and
             holistic wellness. Each category is developed with authenticated herbs,
             classical references, and process-controlled manufacturing, ensuring safety,
             efficacy, and scalability.
           </p>
-          <p className="text-xl text-text-body/80 leading-relaxed mt-4">
+          <p className="text-xl text-text-body/80 leading-relaxed mt-4 text-justify">
             Our formulations are suitable for tablets, capsules, syrups, powders, avaleh,
             oils, and ghrita, customized as per your brand positioning and target market.
           </p>
@@ -343,7 +343,7 @@ export default function Ayur3pProductsPage() {
             className="bg-white rounded-2xl shadow-xl p-6 lg:p-8"
             style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}
           >
-            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
+            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
               All Ayurvedic product categories can be:
             </p>
             <div className="max-w-3xl mx-auto">
@@ -391,8 +391,8 @@ export default function Ayur3pProductsPage() {
             >
               Ready to Build Your Ayurvedic Line?
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
-              Discover Ivy Herbals’ AYUSH-compliant third-party manufacturing capabilities
+            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+              Discover Ivy Herbals' AYUSH-compliant third-party manufacturing capabilities
               and see how we transform classical wisdom and modern requirements into
               shelf-ready Ayurvedic products.
             </p>
@@ -409,7 +409,7 @@ export default function Ayur3pProductsPage() {
             </div>
 
             <p
-              className="text-lg lg:text-xl font-bold text-center italic font-primary"
+              className="text-lg lg:text-xl font-bold italic font-primary text-justify"
               style={{ color: primary }}
             >
               Your Brand. Our Ayurvedic Expertise. One Trusted Manufacturing Journey.

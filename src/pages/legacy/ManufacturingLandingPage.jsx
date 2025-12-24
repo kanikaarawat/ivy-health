@@ -3,7 +3,7 @@ import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Leaf, Sparkles, Package, CheckCircle, Factory, Shield, Award, Users } from 'lucide-react';
-import { content } from '../content/data';
+import { content } from '../../content/data';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 

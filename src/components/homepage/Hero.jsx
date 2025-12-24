@@ -74,21 +74,21 @@ export default function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-12 lg:py-20">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-20 items-start">
-            {/* Left Content */}
+            {/* Left Content - Full width on mobile, half on desktop */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-6 space-y-6 lg:space-y-10 lg:pt-12"
+              className="lg:col-span-6 space-y-8 lg:space-y-10 lg:pt-12 max-w-full lg:max-w-xl"
             >
 
               {/* Main Heading */}
-              <div className="space-y-6">
+              <div className="space-y-6 lg:space-y-6">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary leading-[1.1]"
+                  className="text-5xl sm:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] text-center"
                 >
                   Welcome to Ivy Herbals
                 </motion.h1>
@@ -97,7 +97,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-xl text-text-light max-w-xl leading-relaxed"
+                  className="text-xl lg:text-xl text-text-light leading-relaxed text-justify"
                 >
                   Your Trusted Third-Party Manufacturing Partner
                 </motion.p>
@@ -105,7 +105,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.45 }}
-                  className="text-base text-text-light max-w-xl leading-relaxed mt-4"
+                  className="text-lg lg:text-base text-text-light leading-relaxed text-justify"
                 >
                   At Ivy Herbals, we specialize in B2B contract manufacturing of high-quality herbal and Ayurvedic products.
                 </motion.p>
@@ -113,7 +113,7 @@ export default function Hero() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.5 }}
-                  className="text-base text-text-light max-w-xl leading-relaxed mt-2"
+                  className="text-lg lg:text-base text-text-light leading-relaxed text-justify"
                 >
                   If you are a brand owner, marketer, exporter, or distributor, choose the category you want to manufacture and we will take you to the right division.
                 </motion.p>
@@ -122,13 +122,13 @@ export default function Hero() {
 
             </motion.div>
 
-            {/* Right Image with Parallax */}
+            {/* Right Image with Parallax - Hidden on mobile */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               style={{ y: y2 }}
-              className="lg:col-span-6 mt-4 lg:mt-8 lg:pt-4"
+              className="hidden lg:block lg:col-span-6 mt-4 lg:mt-8 lg:pt-4"
             >
               <div className="relative max-w-md mx-auto lg:max-w-none overflow-visible">
                 {/* Decorative Elements */}

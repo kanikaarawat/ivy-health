@@ -3,11 +3,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Code, Package, Factory, Lightbulb } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { content } from '../../content/data';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { content } from '../../../content/data';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
 export default function Ayur3pProcessPage() {
   const division = content.divisions.ayurvedic;
@@ -43,7 +43,7 @@ export default function Ayur3pProcessPage() {
           <div className="max-w-7xl mx-auto">
             <div className="relative">
               {/* Ribbon-like connecting line */}
-              <div className="absolute left-0 top-0 bottom-0 w-2 hidden lg:block" style={{ 
+              <div className="absolute left-0 top-0 bottom-0 w-2 hidden lg:block z-0" style={{ 
                 backgroundColor: primary,
                 clipPath: 'polygon(0 0, 100% 0, 100% 20%, 0 25%, 0 40%, 100% 45%, 100% 60%, 0 65%, 0 80%, 100% 85%, 100% 100%, 0 100%)',
                 left: '60px'
@@ -77,12 +77,12 @@ export default function Ayur3pProcessPage() {
                         <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                           Step {step.number}: {step.title}
                         </h3>
-                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base">
+                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base text-justify">
                           {step.description}
                         </p>
                         <p className="text-text-body/70 text-xs lg:text-sm flex items-start gap-2">
                           <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 mt-1 flex-shrink-0" style={{ color: primary }} />
-                          <span>{step.guidance}</span>
+                          <span className="text-justify">{step.guidance}</span>
                         </p>
                       </div>
                     </motion.div>
@@ -95,21 +95,24 @@ export default function Ayur3pProcessPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mt-6 lg:mt-8 flex items-start gap-6 lg:gap-8"
+                className="mt-6 lg:mt-8 flex items-start gap-6 lg:gap-8 relative z-10"
               >
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-xl border-4 border-white">
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full text-white flex items-center justify-center shadow-xl border-4 border-white"
+                    style={{ background: `linear-gradient(to bottom right, ${primary}, ${secondary})` }}>
                     <Lightbulb className="w-8 h-8 lg:w-10 lg:h-10" />
                   </div>
                 </div>
-                <div className="flex-1 bg-gradient-to-r from-accent/10 to-primary/10 border-2 border-accent/20 p-5 lg:p-6 rounded-2xl">
-                  <div className="inline-block px-3 py-1 bg-accent/20 rounded-full text-accent font-bold mb-2 text-xs">
+                <div className="flex-1 bg-gradient-to-r from-primary/10 to-secondary/10 border-2 p-5 lg:p-6 rounded-2xl"
+                  style={{ borderColor: `${primary}33` }}>
+                  <div className="inline-block px-3 py-1 rounded-full font-bold mb-2 text-xs"
+                    style={{ backgroundColor: `${primary}20`, color: primary }}>
                     BONUS
                   </div>
                   <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                     {process.bonus.title}
                   </h3>
-                  <p className="text-text-body/80 text-sm lg:text-base">
+                  <p className="text-text-body/80 text-sm lg:text-base text-justify">
                     {process.bonus.description}
                   </p>
                 </div>
@@ -133,7 +136,7 @@ export default function Ayur3pProcessPage() {
               <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
                 Ready to Build Your Ayurvedic Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
                 Discover Ivy Herbals' AYUSH-compliant third-party manufacturing capabilities and see how we transform classical wisdom and modern requirements into shelf-ready Ayurvedic products.
               </p>
               
@@ -156,7 +159,7 @@ True
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold text-center italic font-primary" style={{ color: primary }}>
+              <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
                 Your Brand. Our Ayurvedic Expertise. One Trusted Manufacturing Journey.
               </p>
             </motion.div>
@@ -171,15 +174,15 @@ True
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
               MOQ & Timelines
             </h2>
-            <p className="text-sm lg:text-base text-text-body/80 mb-4 leading-relaxed text-center">
+            <p className="text-sm lg:text-base text-text-body/80 mb-4 leading-relaxed text-justify">
               Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.
             </p>
             <div className="p-6 lg:p-8 rounded-2xl"
               style={{ background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)`, borderColor: `${primary}1a`, borderWidth: '2px' }}>
-              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-relaxed">
+              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-relaxed text-justify">
                 Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection.
               </p>
-              <p className="text-sm lg:text-base text-text-body/70 leading-relaxed">
+              <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">
                 Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.
               </p>
             </div>
@@ -195,10 +198,10 @@ True
               <h2 className="text-h2 font-primary mb-3" style={{ color: primary }}>
                 Packaging Excellence
               </h2>
-              <p className="text-lg lg:text-xl text-text-body/80 italic mb-1">
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-1 text-center">
                 We don't just manufacture products.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 italic mb-4">
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-4 text-center">
                 We create brand experiences.
               </p>
             </div>
@@ -227,7 +230,7 @@ True
                   </motion.div>
                 ))}
               </div>
-              <p className="text-center text-text-body/70 text-sm lg:text-base italic">
+              <p className="text-text-body/70 text-sm lg:text-base italic text-justify">
                 We ensure compatibility, safety, and aesthetic appeal in every pack.
               </p>
             </div>
@@ -262,7 +265,7 @@ True
                       <h3 className="font-bold text-base lg:text-lg mb-2 font-primary" style={{ color: primary }}>
                         {faq.question}
                       </h3>
-                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base">
+                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base text-justify">
                         {faq.answer}
                       </p>
                     </div>

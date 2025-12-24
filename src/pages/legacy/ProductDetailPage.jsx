@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Package, CheckCircle, Leaf, Share2, Heart, ShoppingCart } from 'lucide-react';
-import ProductTabs from '../components/ecommerce/ProductTabs';
-import R3FProductViewer from '../components/3d/R3FProductViewer';
-import ProductCard from '../components/ecommerce/ProductCard';
-import { content } from '../content/data';
-import { useCart } from '../context/CartContext';
-import ShareButton from '../components/common/ShareButton';
+import ProductTabs from '../../components/ecommerce/ProductTabs';
+import R3FProductViewer from '../../components/3d/R3FProductViewer';
+import ProductCard from '../../components/ecommerce/ProductCard';
+import { content } from '../../content/data';
+import { useCart } from '../../context/CartContext';
+import ShareButton from '../../components/common/ShareButton';
 
 export default function ProductDetailPage() {
   const { productId } = useParams();

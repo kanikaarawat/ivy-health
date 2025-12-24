@@ -3,9 +3,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
 
 export default function DivisionProcessPage({ division }) {
   const { process } = division;
@@ -51,12 +51,12 @@ export default function DivisionProcessPage({ division }) {
                     <h3 className="text-h2 font-primary mb-3" style={{ color: primary }}>
                       Step {step.number}: {step.title}
                     </h3>
-                    <p className="text-text-body/80 mb-2 leading-relaxed">
+                    <p className="text-text-body/80 mb-2 leading-relaxed text-justify">
                       {step.description}
                     </p>
                     <p className="text-text-body/70 text-sm flex items-start gap-2">
                       <ArrowRight className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                      <span>{step.guidance}</span>
+                      <span className="text-justify">{step.guidance}</span>
                     </p>
                   </div>
                 </motion.div>
@@ -69,15 +69,17 @@ export default function DivisionProcessPage({ division }) {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-12 bg-gradient-to-r from-accent/10 to-primary/10 p-8 rounded-2xl text-center"
+            className="mt-12 bg-gradient-to-r from-accent/10 to-primary/10 p-8 rounded-2xl"
           >
-            <div className="inline-block px-4 py-1.5 bg-accent/20 rounded-full text-accent font-bold mb-4">
-              BONUS
+            <div className="text-center mb-4">
+              <div className="inline-block px-4 py-1.5 bg-accent/20 rounded-full text-accent font-bold mb-4">
+                BONUS
+              </div>
+              <h3 className="font-serif text-2xl font-bold text-primary mb-3">
+                {process.bonus.title}
+              </h3>
             </div>
-            <h3 className="font-serif text-2xl font-bold text-primary mb-3">
-              {process.bonus.title}
-            </h3>
-            <p className="text-text-body/80 text-lg">
+            <p className="text-text-body/80 text-lg text-justify">
               {process.bonus.description}
             </p>
           </motion.div>
@@ -86,15 +88,15 @@ export default function DivisionProcessPage({ division }) {
 
       {/* MOQ & Timelines */}
       <AnimatedSection className="bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-serif text-4xl font-bold text-primary mb-6">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-serif text-4xl font-bold text-primary mb-6 text-center">
             {process.moq.title}
           </h2>
-          <p className="text-xl text-text-body/80 mb-6 leading-relaxed">
+          <p className="text-xl text-text-body/80 mb-6 leading-relaxed text-justify">
             {process.moq.description}
           </p>
           <div className="bg-white border border-primary/20 p-6 rounded-xl">
-            <p className="text-text-body/70 italic">
+            <p className="text-text-body/70 italic text-justify">
               {process.moq.note}
             </p>
           </div>
@@ -104,11 +106,11 @@ export default function DivisionProcessPage({ division }) {
       {/* Packaging Excellence */}
       <AnimatedSection className="bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-primary mb-4">
+          <div className="mb-12">
+            <h2 className="font-serif text-4xl font-bold text-primary mb-4 text-center">
               {process.packaging.title}
             </h2>
-            <p className="text-xl text-text-body/80 italic">
+            <p className="text-xl text-text-body/80 italic text-justify">
               {process.packaging.subtitle}
             </p>
           </div>
@@ -126,19 +128,19 @@ export default function DivisionProcessPage({ division }) {
               </motion.div>
             ))}
           </div>
-          <p className="text-center text-text-body/70 italic">
+          <p className="text-text-body/70 italic text-justify">
             {process.packaging.description}
           </p>
         </div>
       </AnimatedSection>
 
       {/* CTA Box */}
-      <AnimatedSection className="bg-primary text-background text-center">
+      <AnimatedSection className="bg-primary text-background">
         <div className="max-w-4xl mx-auto">
-          <h2 className="font-serif text-4xl font-bold mb-6">
+          <h2 className="font-serif text-4xl font-bold mb-6 text-center">
             Ready to Build Your {division.shortName} Line?
           </h2>
-          <p className="text-xl text-background/90 mb-8">
+          <p className="text-xl text-background/90 mb-8 text-justify">
             Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -150,7 +152,7 @@ export default function DivisionProcessPage({ division }) {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-          <p className="text-lg text-background/80 mt-8 italic">
+          <p className="text-lg text-background/80 mt-8 italic text-justify">
             Your Brand. Our {division.name} Expertise. One Trusted Manufacturing Journey.
           </p>
         </div>

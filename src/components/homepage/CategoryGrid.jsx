@@ -77,7 +77,7 @@ export default function CategoryGrid() {
       <div className="md:hidden relative z-10">
         <div className="flex gap-4 overflow-x-auto pb-4 px-4 -mx-4 snap-x snap-mandatory scrollbar-hide">
           {manufacturingCategories.map((category, index) => (
-            <div key={category.title} className="flex-shrink-0 w-[85vw] snap-center">
+            <div key={category.title} className="flex-shrink-0 w-[85vw] snap-center h-[600px]">
               <InteractiveCategoryCard 
                 category={category} 
                 index={index} 
@@ -154,47 +154,177 @@ export default function CategoryGrid() {
         </div>
       </motion.div>
       
-      {/* Ready to Start CTA - Outside container on mobile */}
+      {/* Ready to Start CTA - Outside container on mobile - Eye-catching and prominent */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 1 }}
-        className="text-center px-4 md:px-0 md:max-w-5xl md:mx-auto lg:max-w-none"
+        className="text-center px-4 md:px-0 md:max-w-5xl md:mx-auto lg:max-w-none my-8 md:my-12"
       >
-        <div 
+        <motion.div 
           onClick={() => {
             const element = document.getElementById('manufacture-section');
             if (element) {
               element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
           }}
-          className="bg-gradient-to-br from-primary to-primary/90 text-white rounded-2xl p-10 md:p-14 relative overflow-hidden cursor-pointer hover:shadow-2xl transition-all duration-300"
+          className="relative cursor-pointer group"
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
         >
-          {/* Background Effects */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.div 
-              className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/10 rounded-full blur-3xl"
-              animate={{
-                scale: [1, 1.2, 1],
-                rotate: [0, 90, 0],
-              }}
-              transition={{
-                duration: 15,
-                repeat: Infinity,
-                ease: "easeInOut"
-              }}
-            />
+          {/* Pulsing Glow Effect */}
+          <motion.div
+            className="absolute -inset-2 bg-gradient-to-r from-primary via-accent to-primary rounded-3xl opacity-75 blur-xl"
+            animate={{
+              opacity: [0.5, 0.8, 0.5],
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+          
+          {/* Animated Border Ring */}
+          <motion.div
+            className="absolute -inset-1 rounded-3xl border-4 border-white/50"
+            animate={{
+              borderColor: ['rgba(255,255,255,0.5)', 'rgba(255,255,255,0.9)', 'rgba(255,255,255,0.5)'],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+
+          {/* Main CTA Card */}
+          <div className="relative bg-gradient-to-br from-primary via-primary to-accent text-white rounded-2xl p-10 md:p-14 overflow-hidden shadow-2xl">
+            {/* Animated Background Effects */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <motion.div 
+                className="absolute top-0 right-0 w-[400px] h-[400px] bg-white/20 rounded-full blur-3xl"
+                animate={{
+                  scale: [1, 1.3, 1],
+                  rotate: [0, 180, 360],
+                  x: [0, 50, 0],
+                  y: [0, -30, 0],
+                }}
+                transition={{
+                  duration: 8,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              <motion.div 
+                className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-accent/30 rounded-full blur-2xl"
+                animate={{
+                  scale: [1, 1.2, 1],
+                  rotate: [360, 180, 0],
+                  x: [0, -30, 0],
+                  y: [0, 20, 0],
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Shimmer Effect */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                animate={{
+                  x: ['-100%', '200%'],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "linear",
+                  repeatDelay: 1
+                }}
+              />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              {/* Icon/Arrow pointing up */}
+              <motion.div
+                className="flex justify-center mb-4"
+                animate={{
+                  y: [0, -8, 0],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <ArrowRight 
+                  className="w-8 h-8 md:w-10 md:h-10 text-white rotate-[-90deg] drop-shadow-lg" 
+                  style={{ filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.3))' }}
+                />
+              </motion.div>
+
+              <motion.h3 
+                className="text-3xl md:text-5xl font-bold mb-4 text-white drop-shadow-lg"
+                animate={{
+                  scale: [1, 1.02, 1],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                Ready to Start?
+              </motion.h3>
+              
+              <motion.p 
+                className="text-lg md:text-2xl text-white/95 drop-shadow-md mb-6 font-medium"
+                animate={{
+                  opacity: [0.9, 1, 0.9],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                Choose the manufacturing category above to continue.
+              </motion.p>
+
+              {/* Click Indicator */}
+              <motion.div
+                className="flex items-center justify-center gap-2 text-white/90 text-sm md:text-base font-semibold"
+                animate={{
+                  opacity: [0.7, 1, 0.7],
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <span>Click to explore</span>
+                <motion.div
+                  animate={{
+                    x: [0, 5, 0],
+                  }}
+                  transition={{
+                    duration: 1,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                >
+                  <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
+                </motion.div>
+              </motion.div>
+            </div>
           </div>
-          <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
-              Ready to Start?
-            </h3>
-            <p className="text-xl text-white drop-shadow-md">
-              Choose the manufacturing category above to continue.
-            </p>
-          </div>
-        </div>
+        </motion.div>
       </motion.div>
 
     </AnimatedSection>
@@ -213,6 +343,7 @@ function InteractiveCategoryCard({ category, index }) {
       transition={{ delay: index * 0.15, type: "spring", stiffness: 100 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      className="h-full"
     >
       <Link to={category.path} className="group block h-full">
         <motion.div
@@ -246,25 +377,6 @@ function InteractiveCategoryCard({ category, index }) {
             />
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            
-            {/* Letter Label */}
-            <div className="absolute top-4 left-4 z-10">
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                {category.letter}
-              </div>
-            </div>
-            
-            {/* Floating Sparkle */}
-            <motion.div
-              className="absolute top-4 right-4"
-              animate={{ 
-                rotate: isHovered ? 360 : 0,
-                scale: isHovered ? 1.2 : 1
-              }}
-              transition={{ duration: 0.5 }}
-            >
-              <Sparkles className="w-7 h-7 text-accent drop-shadow-lg" />
-            </motion.div>
 
             {/* Category Badge */}
             <motion.div
@@ -278,8 +390,8 @@ function InteractiveCategoryCard({ category, index }) {
           </div>
 
           {/* Content with Reveal Animation */}
-          <div className="p-6 space-y-3 relative flex flex-col flex-grow">
-            <div>
+          <div className="p-6 space-y-3 relative flex flex-col flex-grow min-h-0">
+            <div className="flex-shrink-0">
               <motion.h3 
                 className="text-2xl md:text-3xl font-bold text-primary mb-2"
               >
@@ -290,7 +402,7 @@ function InteractiveCategoryCard({ category, index }) {
               </p>
             </div>
             
-            <p className="text-base text-text-body/80 leading-relaxed flex-grow">
+            <p className="text-base text-text-body/80 leading-relaxed flex-grow min-h-0 overflow-hidden text-justify">
               {category.description}
             </p>
             

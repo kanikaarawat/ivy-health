@@ -98,11 +98,11 @@ export default function ContactPage() {
 
       {/* Intro */}
       <AnimatedSection className="bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-h2 font-primary mb-6" style={{ color: primary }}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-h2 font-primary mb-6 text-center" style={{ color: primary }}>
             {contactPage.intro.title}
           </h2>
-          <p className="text-xl text-text-body/80 leading-relaxed">
+          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
             {contactPage.intro.body}
           </p>
         </div>
@@ -311,7 +311,12 @@ export default function ContactPage() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-secondary/30 focus:border-accent focus:outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border focus:outline-none transition-colors"
+                  style={{ 
+                    borderColor: '#CBD5CE'
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = primary}
+                  onBlur={(e) => e.target.style.borderColor = '#CBD5CE'}
                 />
               </div>
 
@@ -324,8 +329,14 @@ export default function ContactPage() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  rows={5}
-                  className="w-full px-4 py-3 rounded-lg border border-secondary/30 focus:border-accent focus:outline-none transition-colors resize-none"
+                  rows={3}
+                  className="w-full px-4 py-3 rounded-lg border border-secondary/30 focus:outline-none transition-colors resize-none"
+                  style={{ 
+                    borderColor: '#CBD5CE',
+                    focusBorderColor: primary 
+                  }}
+                  onFocus={(e) => e.target.style.borderColor = primary}
+                  onBlur={(e) => e.target.style.borderColor = '#CBD5CE'}
                 />
               </div>
 
@@ -338,8 +349,16 @@ export default function ContactPage() {
                 className={`w-full px-8 py-5 rounded-2xl font-bold flex items-center justify-center gap-3 transition-all duration-300 overflow-hidden relative group ${
                   isSubmitting || submitSuccess
                     ? 'bg-gray-400 cursor-not-allowed'
-                    : 'bg-gradient-to-r from-primary to-accent text-white shadow-xl hover:shadow-2xl'
+                    : 'text-white shadow-xl hover:shadow-2xl'
                 }`}
+                style={
+                  isSubmitting || submitSuccess
+                    ? {}
+                    : { 
+                        backgroundColor: primary,
+                        background: `linear-gradient(to right, ${primary}, ${secondary})`
+                      }
+                }
               >
                 {/* Animated Background */}
                 {!isSubmitting && !submitSuccess && (
@@ -440,7 +459,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1" style={{ color: primary }}>Address</h4>
-                    <p className="text-text-body/70">
+                    <p className="text-text-body/70 text-justify">
                       {contactPage.info.address}
                     </p>
                   </div>
@@ -452,7 +471,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1" style={{ color: primary }}>Hours</h4>
-                    <p className="text-text-body/70">
+                    <p className="text-text-body/70 text-justify">
                       {contactPage.info.hours}
                     </p>
                   </div>
@@ -469,7 +488,7 @@ export default function ContactPage() {
               <h4 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                 Visit Our Facility
               </h4>
-              <p className="text-text-body/70">
+              <p className="text-text-body/70 text-justify">
                 We welcome visits to our GMP-certified facility. Please schedule an appointment.
               </p>
             </div>
@@ -479,11 +498,11 @@ export default function ContactPage() {
 
       {/* Division-Specific Contacts */}
       <AnimatedSection className="bg-white">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-h2 font-primary mb-4" style={{ color: primary }}>
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
             Division-Specific Contacts
           </h2>
-          <p className="text-xl text-text-body/80 mb-12">
+          <p className="text-xl text-text-body/80 mb-12 text-justify">
             For inquiries about specific product divisions, reach out directly to our specialized teams
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

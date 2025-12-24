@@ -1,35 +1,35 @@
-// src/pages/divisions/Cosmo3pProcessPage.jsx
+// src/pages/divisions/Feed3pProcessPage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, FileText, Code, Package, Factory, Lightbulb } from 'lucide-react';
-import PageHero from '../../components/global/PageHero';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { content } from '../../content/data';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import PageHero from '../../../components/global/PageHero';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { content } from '../../../content/data';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
-export default function Cosmo3pProcessPage() {
-  const division = content.divisions.cosmetics;
+export default function Feed3pProcessPage() {
+  const division = content.divisions.feed;
   const { process } = division;
   const { primary, secondary } = useDivisionColor();
 
   const faqs = [
     {
-      question: "Can I customize fragrance or texture?",
-      answer: "Yes, our team supports complete sensory customization — texture, aroma, and color tone."
+      question: "Can I start with small quantities?",
+      answer: "Yes, we offer pilot batches and test runs for selected formulations."
     },
     {
-      question: "Do you provide label or branding support?",
-      answer: "Absolutely — we assist with packaging design and brand presentation."
+      question: "Do you help with label design?",
+      answer: "Absolutely. We offer branding and packaging assistance to bring your vision alive."
     },
     {
-      question: "Are your cosmetics paraben and sulphate free?",
-      answer: "Yes, all our products can be made free from parabens, sulphates, silicones, and synthetic dyes."
+      question: "Are all products AYUSH compliant?",
+      answer: "Yes, all formulations are manufactured under AYUSH guidelines."
     },
     {
-      question: "Are your formulations tested for safety?",
-      answer: "Yes, products undergo dermatological and microbial safety tests as per BIS norms."
+      question: "Can I customize formulations?",
+      answer: "Yes, we support both ready and fully customized formulations."
     }
   ];
 
@@ -43,7 +43,7 @@ export default function Cosmo3pProcessPage() {
           <div className="max-w-7xl mx-auto">
             <div className="relative">
               {/* Ribbon-like connecting line */}
-              <div className="absolute left-0 top-0 bottom-0 w-2 hidden lg:block" style={{ 
+              <div className="absolute left-0 top-0 bottom-0 w-2 hidden lg:block z-0" style={{ 
                 backgroundColor: primary,
                 clipPath: 'polygon(0 0, 100% 0, 100% 20%, 0 25%, 0 40%, 100% 45%, 100% 60%, 0 65%, 0 80%, 100% 85%, 100% 100%, 0 100%)',
                 left: '60px'
@@ -77,12 +77,12 @@ export default function Cosmo3pProcessPage() {
                         <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                           Step {step.number}: {step.title}
                         </h3>
-                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base">
+                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base text-justify">
                           {step.description}
                         </p>
                         <p className="text-text-body/70 text-xs lg:text-sm flex items-start gap-2">
                           <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 mt-1 flex-shrink-0" style={{ color: primary }} />
-                          <span>{step.guidance}</span>
+                          <span className="text-justify">{step.guidance}</span>
                         </p>
                       </div>
                     </motion.div>
@@ -95,21 +95,24 @@ export default function Cosmo3pProcessPage() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mt-6 lg:mt-8 flex items-start gap-6 lg:gap-8"
+                className="mt-6 lg:mt-8 flex items-start gap-6 lg:gap-8 relative z-10"
               >
-                <div className="flex-shrink-0">
-                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full bg-gradient-to-br from-accent to-accent/80 text-white flex items-center justify-center shadow-xl border-4 border-white">
+                <div className="flex-shrink-0 relative z-10">
+                  <div className="w-16 h-16 lg:w-20 lg:h-20 rounded-full text-white flex items-center justify-center shadow-xl border-4 border-white"
+                    style={{ background: `linear-gradient(to bottom right, ${primary}, ${secondary})` }}>
                     <Lightbulb className="w-8 h-8 lg:w-10 lg:h-10" />
                   </div>
                 </div>
-                <div className="flex-1 bg-gradient-to-r from-accent/10 to-primary/10 border-2 border-accent/20 p-5 lg:p-6 rounded-2xl">
-                  <div className="inline-block px-3 py-1 bg-accent/20 rounded-full text-accent font-bold mb-2 text-xs">
+                <div className="flex-1 bg-gradient-to-r from-primary/10 to-secondary/10 border-2 p-5 lg:p-6 rounded-2xl"
+                  style={{ borderColor: `${primary}33` }}>
+                  <div className="inline-block px-3 py-1 rounded-full font-bold mb-2 text-xs"
+                    style={{ backgroundColor: `${primary}20`, color: primary }}>
                     BONUS
                   </div>
                   <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                     {process.bonus.title}
                   </h3>
-                  <p className="text-text-body/80 text-sm lg:text-base">
+                  <p className="text-text-body/80 text-sm lg:text-base text-justify">
                     {process.bonus.description}
                   </p>
                 </div>
@@ -119,7 +122,7 @@ export default function Cosmo3pProcessPage() {
         </div>
       </AnimatedSection>
 
-      {/* CTA Box Section */}
+      {/* Ready to Build Section - Card Format */}
       <AnimatedSection className="py-8" style={{ background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)` }}>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
@@ -131,33 +134,36 @@ export default function Cosmo3pProcessPage() {
               style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}
             >
               <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
-                Ready to Build Your Cosmetic Line?
+                Ready to Build Your Animal Nutrition Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-center">
-                Explore our diverse cosmetic manufacturing capabilities and understand how we transform ideas into shelf-ready products.
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+                Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities for feed supplements and veterinary nutrition, where nutrition science, herbal actives, and performance-driven formulations come together to deliver farm-ready, scalable products.
               </p>
               
               <div className="mb-4">
                 <Link
-                  to="/cosmo3p/products"
+                  to="/feed3p/products"
                   className="inline-flex items-center gap-2 font-semibold text-base lg:text-lg transition-colors"
                   style={{ color: primary }}
                   replace_all
 True
                 >
                   <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
-                  <span>Explore Product Categories</span>
+                  <span>Explore Animal Nutrition Product Categories</span>
                 </Link>
               </div>
 
               <div className="p-4 lg:p-5 rounded-xl mb-4" style={{ backgroundColor: `${primary}0d` }}>
+                <p className="text-sm lg:text-base text-text-body/80 font-medium mb-2">
+                  Poultry • Ruminants • Aqua • Pets • Equine • Swine
+                </p>
                 <p className="text-sm lg:text-base text-text-body/80 font-medium">
-                  Discover skincare, haircare, body care, baby care, men's grooming & specialized cosmetic ranges.
+                  Growth & FCR • Immunity • Gut Health • Fertility • Stress & Heat Management • Productivity Solutions
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold text-center italic font-primary" style={{ color: primary }}>
-                Your Brand. Our R&D Expertise. One Seamless Manufacturing Journey.
+              <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
+                Your Brand. Our Nutritional Expertise. One Trusted Manufacturing Journey.
               </p>
             </motion.div>
           </div>
@@ -171,15 +177,15 @@ True
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
               MOQ & Timelines
             </h2>
+            <p className="text-sm lg:text-base text-text-body/80 mb-4 leading-relaxed text-justify">
+              Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.
+            </p>
             <div className="p-6 lg:p-8 rounded-2xl"
               style={{ background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)`, borderColor: `${primary}1a`, borderWidth: '2px' }}>
-              <p className="text-sm lg:text-base text-text-body/80 mb-3 leading-relaxed">
-                Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.
-              </p>
-              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-relaxed">
+              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-relaxed text-justify">
                 Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection.
               </p>
-              <p className="text-sm lg:text-base text-text-body/70 leading-relaxed">
+              <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">
                 Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.
               </p>
             </div>
@@ -195,23 +201,23 @@ True
               <h2 className="text-h2 font-primary mb-3" style={{ color: primary }}>
                 Packaging Excellence
               </h2>
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-1 text-justify">
+                We don't just manufacture products.
+              </p>
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-4 text-justify">
+                we package your identity.
+              </p>
             </div>
             
             <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-lg"
               style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 text-center italic">
-                We offer aesthetic, functional, and trend-aligned packaging options to elevate your brand's shelf presence.
-              </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4 mb-4">
                 {[
-                  'Airless Jars',
-                  'Pumps & Tubes',
-                  'PET & Glass Bottles',
-                  'HDPE & PCR Plastic Containers',
-                  'Aluminum & Paperboard Tubes',
-                  'Eco-Friendly Refill Packs',
-                  'Premium Foiled & Printed Cartons'
+                  'HDPE / PET bottles & jars',
+                  'Alu-Alu / Blister packs',
+                  'Foils sachets & pouches',
+                  'Custom label printing & colour-coded caps',
+                  'Bulk & export-grade containers'
                 ].map((option, index) => (
                   <motion.div
                     key={index}
@@ -226,9 +232,8 @@ True
                   </motion.div>
                 ))}
               </div>
-              
-              <p className="text-center text-text-body/70 text-sm lg:text-base italic">
-                From clean minimalism to luxury matte — your packaging speaks your brand.
+              <p className="text-text-body/70 text-sm lg:text-base italic text-justify">
+                Aesthetic, durable, and farm-friendly.
               </p>
             </div>
           </div>
@@ -262,7 +267,7 @@ True
                       <h3 className="font-bold text-base lg:text-lg mb-2 font-primary" style={{ color: primary }}>
                         {faq.question}
                       </h3>
-                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base">
+                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base text-justify">
                         {faq.answer}
                       </p>
                     </div>

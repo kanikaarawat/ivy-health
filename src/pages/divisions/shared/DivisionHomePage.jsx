@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
 
 export default function DivisionHomePage({ division }) {
   const { primary, secondary } = useDivisionColor();
@@ -123,7 +123,7 @@ export default function DivisionHomePage({ division }) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-h1 sm:text-6xl lg:text-7xl font-primary leading-[1.1]"
+                  className="text-h1 sm:text-6xl lg:text-7xl font-primary leading-[1.1] text-center"
                   style={{ color: primary }}
                 >
                   {isFeed3p || isCosmo3p || isAyur3p ? 'Your Brand, Backed by Ivy.' : 'Growing the Ivy Way'}
@@ -133,7 +133,7 @@ export default function DivisionHomePage({ division }) {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="text-xl max-w-xl leading-relaxed"
+                  className="text-xl max-w-xl leading-relaxed text-center"
                   style={{ color: '#29261d' }}
                 >
                   {division.tagline}

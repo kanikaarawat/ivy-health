@@ -1,9 +1,9 @@
 // src/pages/LegalPage.jsx
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import PageHero from '../components/global/PageHero';
-import AnimatedSection from '../components/motion/AnimatedSection';
-import { content } from '../content/data';
+import PageHero from '../../components/global/PageHero';
+import AnimatedSection from '../../components/motion/AnimatedSection';
+import { content } from '../../content/data';
 
 export default function LegalPage() {
   const { pageSlug } = useParams();

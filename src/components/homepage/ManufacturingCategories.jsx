@@ -49,7 +49,7 @@ export default function ManufacturingCategories() {
             Please select one of the following manufacturing categories to proceed.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
             {divisionsList.map((division, index) => {
               const icons = {
                 ayurvedic: Leaf,
@@ -103,8 +103,8 @@ export default function ManufacturingCategories() {
                   whileHover={{ y: -8, scale: 1.02 }}
                   className="group"
                 >
-                  <Link to={`/${division.slug}`}>
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-primary/10 hover:shadow-2xl transition-all h-full flex flex-col relative group/card">
+                  <Link to={`/${division.slug}`} className="h-full flex">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-primary/10 hover:shadow-2xl transition-all w-full h-full flex flex-col relative group/card">
                       {/* Hover Background Effect */}
                       <motion.div
                         className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-300 rounded-2xl"
@@ -120,39 +120,29 @@ export default function ManufacturingCategories() {
                           whileHover={{ scale: 1.1 }}
                           transition={{ duration: 0.6 }}
                         />
-                        {/* Letter Label */}
-                        <div className="absolute top-4 left-4 z-10">
-                          <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                            {data.letter}
-                          </div>
-                        </div>
                         {/* Product Badge Overlay */}
                         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-10">
                           <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
                             <span className="text-sm font-medium text-primary">{data.badge}</span>
                           </div>
                         </div>
-                        {/* Star Icon */}
-                        <div className="absolute top-4 right-4 z-10">
-                          <Sparkles className="w-5 h-5 text-white/80 drop-shadow-lg" />
-                        </div>
                         {/* Gradient Overlay */}
                         <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent" />
                       </div>
                       
-                      <div className="p-6 flex flex-col flex-grow relative z-10">
+                      <div className="p-6 flex flex-col flex-grow min-h-0 relative z-10">
                         {/* Title */}
-                        <h4 className="text-xl md:text-2xl font-bold text-primary mb-2 group-hover/card:text-accent transition-colors">
+                        <h4 className="text-xl md:text-2xl font-bold text-primary mb-2 group-hover/card:text-accent transition-colors flex-shrink-0">
                           {data.title}
                         </h4>
                         
                         {/* Subtitle */}
-                        <p className="text-sm font-semibold text-accent mb-4">
+                        <p className="text-sm font-semibold text-accent mb-4 flex-shrink-0">
                           {data.subtitle}
                         </p>
 
                         {/* Description */}
-                        <p className="text-text-light mb-6 flex-grow leading-relaxed group-hover/card:text-text-body transition-colors">
+                        <p className="text-text-light mb-6 flex-grow min-h-0 leading-relaxed group-hover/card:text-text-body transition-colors overflow-hidden text-justify">
                           {data.description}
                         </p>
 

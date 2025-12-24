@@ -18,39 +18,39 @@ import EnhancedMobileHeader from './components/mobile/EnhancedMobileHeader';
 import ComparisonTool from './components/desktop/ComparisonTool';
 
 // Pages
-import ManufacturingLandingPage from './pages/ManufacturingLandingPage';
+import ManufacturingLandingPage from './pages/legacy/ManufacturingLandingPage';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
-import SciencePage from './pages/SciencePage';
+import SciencePage from './pages/legacy/SciencePage';
 import ContractManufacturingPage from './pages/ContractManufacturingPage';
 import ContactPage from './pages/ContactPage';
-import ShopLandingPage from './pages/ShopLandingPage';
+import ShopLandingPage from './pages/legacy/ShopLandingPage';
 import CategoryPage from './pages/CategoryPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import LegalPage from './pages/LegalPage';
+import ProductDetailPage from './pages/legacy/ProductDetailPage';
+import LegalPage from './pages/legacy/LegalPage';
 import NotFoundPage from './pages/NotFoundPage';
-import CartPage from './pages/CartPage';
+import CartPage from './pages/legacy/CartPage';
 
 // Division Pages - Ayurvedic
-import Ayur3pHomePage from './pages/divisions/Ayur3pHomePage';
-import Ayur3pAboutPage from './pages/divisions/Ayur3pAboutPage';
-import Ayur3pSciencePage from './pages/divisions/Ayur3pSciencePage';
-import Ayur3pProcessPage from './pages/divisions/Ayur3pProcessPage';
-import Ayur3pProductsPage from './pages/divisions/Ayur3pProductsPage';
+import Ayur3pHomePage from './pages/divisions/ayur3p/Ayur3pHomePage';
+import Ayur3pAboutPage from './pages/divisions/ayur3p/Ayur3pAboutPage';
+import Ayur3pSciencePage from './pages/divisions/ayur3p/Ayur3pSciencePage';
+import Ayur3pProcessPage from './pages/divisions/ayur3p/Ayur3pProcessPage';
+import Ayur3pProductsPage from './pages/divisions/ayur3p/Ayur3pProductsPage';
 
 // Division Pages - Feed
-import Feed3pHomePage from './pages/divisions/Feed3pHomePage';
-import Feed3pAboutPage from './pages/divisions/Feed3pAboutPage';
-import Feed3pSciencePage from './pages/divisions/Feed3pSciencePage';
-import Feed3pProcessPage from './pages/divisions/Feed3pProcessPage';
-import Feed3pProductsPage from './pages/divisions/Feed3pProductsPage';
+import Feed3pHomePage from './pages/divisions/feed3p/Feed3pHomePage';
+import Feed3pAboutPage from './pages/divisions/feed3p/Feed3pAboutPage';
+import Feed3pSciencePage from './pages/divisions/feed3p/Feed3pSciencePage';
+import Feed3pProcessPage from './pages/divisions/feed3p/Feed3pProcessPage';
+import Feed3pProductsPage from './pages/divisions/feed3p/Feed3pProductsPage';
 
 // Division Pages - Cosmetics
-import Cosmo3pHomePage from './pages/divisions/Cosmo3pHomePage';
-import Cosmo3pAboutPage from './pages/divisions/Cosmo3pAboutPage';
-import Cosmo3pSciencePage from './pages/divisions/Cosmo3pSciencePage';
-import Cosmo3pProcessPage from './pages/divisions/Cosmo3pProcessPage';
-import Cosmo3pProductsPage from './pages/divisions/Cosmo3pProductsPage';
+import Cosmo3pHomePage from './pages/divisions/cosmo3p/Cosmo3pHomePage';
+import Cosmo3pAboutPage from './pages/divisions/cosmo3p/Cosmo3pAboutPage';
+import Cosmo3pSciencePage from './pages/divisions/cosmo3p/Cosmo3pSciencePage';
+import Cosmo3pProcessPage from './pages/divisions/cosmo3p/Cosmo3pProcessPage';
+import Cosmo3pProductsPage from './pages/divisions/cosmo3p/Cosmo3pProductsPage';
 
 // Scroll to top on route change
 function ScrollToTop() {

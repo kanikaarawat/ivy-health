@@ -1,16 +1,16 @@
-// src/pages/divisions/Feed3pHomePage.jsx
+// src/pages/divisions/Cosmo3pHomePage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, CheckCircle, Play } from 'lucide-react';
-import DivisionHomePage from './DivisionHomePage';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { content } from '../../content/data';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import DivisionHomePage from '../shared/DivisionHomePage';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { content } from '../../../content/data';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
-export default function Feed3pHomePage() {
-  const division = content.divisions.feed;
+export default function Cosmo3pHomePage() {
+  const division = content.divisions.cosmetics;
   const { primary, secondary } = useDivisionColor();
 
   return (
@@ -37,11 +37,17 @@ export default function Feed3pHomePage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <p className="text-lg text-text-body/80 leading-relaxed">
-                  At Ivy Herbals, we combine scientific formulation with on-ground farming insight to deliver high-quality, reliable animal feed Supplements.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  At Ivy Herbals, we unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed">
-                  With decades of manufacturing experience and a team of nutritionists and veterinarians, we partner with emerging and established brands for private labeling, custom formulations, and end-to-end production support.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  We specialize in private labeling, custom formulations, and end-to-end skincare manufacturing for both emerging and premium beauty brands.
+                </p>
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  From herbal actives to final packaging, every stage at Ivy Herbals is guided by efficacy, safety, and aesthetics.
+                </p>
+                <p className="text-lg font-semibold leading-relaxed text-justify" style={{ color: primary }}>
+                  Pure, Sustainable, and Dermatologically Tested — Every Time.
                 </p>
               </motion.div>
               
@@ -52,7 +58,7 @@ export default function Feed3pHomePage() {
                 className="grid grid-cols-2 gap-6"
               >
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>5+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>6+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Specialized Divisions</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
@@ -60,11 +66,11 @@ export default function Feed3pHomePage() {
                   <div className="text-sm" style={{ color: '#29261d' }}>Years of Excellence</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>250+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>70+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Formulations</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>700+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>100+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Business Clients Worldwide</div>
                 </div>
               </motion.div>
@@ -77,7 +83,7 @@ export default function Feed3pHomePage() {
               className="flex flex-wrap gap-4 justify-center"
             >
               <Link
-                to="/feed3p/about"
+                to="/cosmo3p/about"
                 className="group text-white px-8 py-4 rounded-full transition-colors inline-flex items-center gap-2"
                 style={{ backgroundColor: primary }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
@@ -87,7 +93,7 @@ export default function Feed3pHomePage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/feed3p/process"
+                to="/cosmo3p/process"
                 className="px-8 py-4 rounded-full border-2 transition-colors"
                 style={{ borderColor: `${primary}33`, color: primary }}
                 onMouseEnter={(e) => {
@@ -126,15 +132,15 @@ export default function Feed3pHomePage() {
               className="bg-white rounded-2xl p-8 lg:p-12 shadow-lg"
             >
               <ul className="space-y-4 mb-8">
-                {division.manufacturingDivisions.map((division, index) => (
+                {division.manufacturingDivisions.map((divisionName, index) => (
                   <li key={index} className="flex items-center gap-3 text-lg text-text-body/80">
                     <CheckCircle className="w-6 h-6 flex-shrink-0" style={{ color: primary }} />
-                    <span>{division}</span>
+                    <span>{divisionName}</span>
                   </li>
                 ))}
               </ul>
-              <p className="text-lg text-text-body/70 leading-relaxed">
-                All sections function under independent QA supervision and an integrated supply chain ensuring purity, consistency, and on-time dispatch.
+              <p className="text-lg text-text-body/70 leading-relaxed text-justify">
+                All units are designed to maintain formula integrity, aesthetic consistency, and product stability.
               </p>
             </motion.div>
           </div>
@@ -152,10 +158,10 @@ export default function Feed3pHomePage() {
               className="text-center mb-12"
             >
               <h2 className="text-h1 lg:text-5xl font-primary mb-6" style={{ color: primary }}>Facility Overview Video</h2>
-              <p className="text-lg text-text-body/70 max-w-3xl mx-auto">
+              <p className="text-lg text-text-body/70 max-w-3xl mx-auto text-justify">
                 Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
               </p>
-              <p className="text-base text-text-body/60 mt-2">
+              <p className="text-base text-text-body/60 mt-2 text-justify">
                 Build trust & show scale and hygiene.
               </p>
             </motion.div>

@@ -1,16 +1,16 @@
-// src/pages/divisions/Cosmo3pHomePage.jsx
+// src/pages/divisions/Ayur3pHomePage.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Factory, CheckCircle, Play } from 'lucide-react';
-import DivisionHomePage from './DivisionHomePage';
-import AnimatedSection from '../../components/motion/AnimatedSection';
-import { content } from '../../content/data';
-import { useDivisionColor } from '../../hooks/useDivisionColor';
-import DivisionMobileTabs from '../../components/mobile/DivisionMobileTabs';
+import DivisionHomePage from '../shared/DivisionHomePage';
+import AnimatedSection from '../../../components/motion/AnimatedSection';
+import { content } from '../../../content/data';
+import { useDivisionColor } from '../../../hooks/useDivisionColor';
+import DivisionMobileTabs from '../../../components/mobile/DivisionMobileTabs';
 
-export default function Cosmo3pHomePage() {
-  const division = content.divisions.cosmetics;
+export default function Ayur3pHomePage() {
+  const division = content.divisions.ayurvedic;
   const { primary, secondary } = useDivisionColor();
 
   return (
@@ -37,17 +37,17 @@ export default function Cosmo3pHomePage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <p className="text-lg text-text-body/80 leading-relaxed">
-                  At Ivy Herbals, we unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed">
-                  We specialize in private labeling, custom formulations, and end-to-end skincare manufacturing for both emerging and premium beauty brands.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  With decades of expertise and a commitment to excellence, we've become a trusted partner for private labeling, customized formulations, and complete product development solutions.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed">
-                  From herbal actives to final packaging, every stage at Ivy Herbals is guided by efficacy, safety, and aesthetics.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  From concept to creation, we help Ayurvedic brands transform ideas into impactful wellness products that resonate with today's lifestyle and values.
                 </p>
-                <p className="text-lg font-semibold leading-relaxed" style={{ color: primary }}>
-                  Pure, Sustainable, and Dermatologically Tested — Every Time.
+                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                  Our state-of-the-art facility operates under globally recognized certifications, ensuring purity, consistency, and compliance at every stage.
                 </p>
               </motion.div>
               
@@ -58,7 +58,7 @@ export default function Cosmo3pHomePage() {
                 className="grid grid-cols-2 gap-6"
               >
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>6+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>5+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Specialized Divisions</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
@@ -66,11 +66,11 @@ export default function Cosmo3pHomePage() {
                   <div className="text-sm" style={{ color: '#29261d' }}>Years of Excellence</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>70+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>200+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Formulations</div>
                 </div>
                 <div className="p-6 rounded-2xl text-center" style={{ backgroundColor: `${primary}0d` }}>
-                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>100+</div>
+                  <div className="text-3xl font-bold mb-2" style={{ color: primary }}>500+</div>
                   <div className="text-sm" style={{ color: '#29261d' }}>Business Clients Worldwide</div>
                 </div>
               </motion.div>
@@ -83,7 +83,7 @@ export default function Cosmo3pHomePage() {
               className="flex flex-wrap gap-4 justify-center"
             >
               <Link
-                to="/cosmo3p/about"
+                to="/ayur3p/about"
                 className="group text-white px-8 py-4 rounded-full transition-colors inline-flex items-center gap-2"
                 style={{ backgroundColor: primary }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = '0.9'}
@@ -93,7 +93,7 @@ export default function Cosmo3pHomePage() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/cosmo3p/process"
+                to="/ayur3p/process"
                 className="px-8 py-4 rounded-full border-2 transition-colors"
                 style={{ borderColor: `${primary}33`, color: primary }}
                 onMouseEnter={(e) => {
@@ -139,8 +139,8 @@ export default function Cosmo3pHomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-lg text-text-body/70 leading-relaxed">
-                All units are designed to maintain formula integrity, aesthetic consistency, and product stability.
+              <p className="text-lg text-text-body/70 leading-relaxed text-justify">
+                All sections operate under independent quality monitoring and a unified supply chain, guaranteeing standardized quality and on-time delivery.
               </p>
             </motion.div>
           </div>
@@ -158,10 +158,10 @@ export default function Cosmo3pHomePage() {
               className="text-center mb-12"
             >
               <h2 className="text-h1 lg:text-5xl font-primary mb-6" style={{ color: primary }}>Facility Overview Video</h2>
-              <p className="text-lg text-text-body/70 max-w-3xl mx-auto">
+              <p className="text-lg text-text-body/70 max-w-3xl mx-auto text-justify">
                 Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
               </p>
-              <p className="text-base text-text-body/60 mt-2">
+              <p className="text-base text-text-body/60 mt-2 text-justify">
                 Build trust & show scale and hygiene.
               </p>
             </motion.div>
