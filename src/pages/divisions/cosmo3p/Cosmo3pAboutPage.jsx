@@ -24,19 +24,19 @@ export default function Cosmo3pAboutPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 At Ivy Herbals, our cosmetic division was born from a simple yet powerful belief: nature and science work best together.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Rooted in India's rich Ayurvedic heritage and strengthened by modern cosmetic science, we create high-performance skincare, haircare, and personal care products for brands that value purity, efficacy, and consistency.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 What began as a commitment to authentic herbal formulations has evolved into a full-scale cosmetic manufacturing ecosystem, supporting startups, D2C brands, dermatology-inspired labels, and premium beauty houses across India and international markets.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 From concept to shelf, we partner with brands to transform ideas into safe, scalable, and market-ready cosmetic products — crafted with integrity, precision, and care.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed font-semibold text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed font-semibold leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Your brand vision. Our manufacturing excellence.
               </p>
               
@@ -49,7 +49,7 @@ export default function Cosmo3pAboutPage() {
                 style={{ background: `linear-gradient(to bottom right, ${primary}1a, ${secondary}1a)`, borderColor: `${primary}33`, borderWidth: '2px' }}
               >
                 <h3 className="text-xl lg:text-2xl font-bold mb-4 font-primary" style={{ color: primary }}>Founder's Philosophy:</h3>
-                <p className="text-lg lg:text-xl italic font-semibold leading-relaxed text-justify" style={{ color: primary }}>
+                <p className="text-lg lg:text-xl italic font-semibold leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
                   "Ayurveda se Swasth hai. Swasth se Sundarta." (Health through Ayurveda creates strength, vitality, and balance — in every living being.)
                 </p>
               </motion.div>
@@ -70,10 +70,10 @@ export default function Cosmo3pAboutPage() {
               style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}
             >
               <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>Our Vision</h2>
-              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-3 text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-3 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 To become a globally trusted cosmetic manufacturing partner, known for blending Ayurvedic wisdom with advanced cosmetic science, while enabling brands to create products that are clean, effective, and future-ready.
               </p>
-              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 We envision Ivy Herbals as a symbol of quality-led growth, where innovation, sustainability, and transparency define every formulation we produce.
               </p>
             </motion.div>
@@ -105,7 +105,7 @@ export default function Cosmo3pAboutPage() {
                 >
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-                    <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{point}</p>
+                    <p className="text-sm lg:text-base text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">{point}</p>
                   </div>
                 </motion.div>
               ))}
@@ -148,7 +148,7 @@ export default function Cosmo3pAboutPage() {
                   style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}
                 >
                   <h3 className="text-h3 font-primary mb-3" style={{ color: primary }}>{value.title}</h3>
-                  <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">{value.description}</p>
+                  <p className="text-sm lg:text-base text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -161,7 +161,7 @@ export default function Cosmo3pAboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>Our Certifications & Compliance</h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-6 text-justify">
+            <p className="text-base lg:text-lg text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Our cosmetic manufacturing facility adheres to nationally and internationally recognized quality systems:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
@@ -184,12 +184,12 @@ export default function Cosmo3pAboutPage() {
                 >
                   <div className="flex items-start gap-3">
                     <Shield className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-                    <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{cert}</p>
+                    <p className="text-sm lg:text-base text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">{cert}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
-            <p className="text-base lg:text-lg text-text-body/70 italic text-justify">
+            <p className="text-base lg:text-lg text-text-body/70 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
               These certifications reflect our unwavering commitment to safe, compliant, and globally acceptable cosmetic manufacturing.
             </p>
           </div>
@@ -203,10 +203,10 @@ export default function Cosmo3pAboutPage() {
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>Our Journey</h2>
             <div className="bg-white rounded-2xl shadow-xl p-6 lg:p-8 mb-6"
               style={{ borderColor: `${primary}1a`, borderWidth: '2px' }}>
-              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-4 text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 With over two decades of manufacturing excellence, Ivy Herbals has grown from a formulation-focused enterprise into a multi-division manufacturing partner trusted by over 100+ brands worldwide.
               </p>
-              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-4 text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Our cosmetic division represents the perfect balance of:
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -227,12 +227,12 @@ export default function Cosmo3pAboutPage() {
                   >
                     <div className="flex items-start gap-3">
                       <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-                      <p className="text-sm lg:text-base text-text-body/80 text-justify">{point}</p>
+                      <p className="text-sm lg:text-base text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">{point}</p>
                     </div>
                   </motion.div>
                 ))}
               </div>
-              <p className="text-base lg:text-lg text-text-body/80 leading-relaxed text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Today, Ivy Herbals proudly supports brands across skincare, haircare, body care, baby care, and men's grooming — helping them launch, grow, and scale with confidence.
               </p>
             </div>
@@ -245,7 +245,7 @@ export default function Cosmo3pAboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-h2 font-primary mb-6 text-center" style={{ color: primary }}>Why Choose Ivy Herbals</h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-6 text-justify">
+            <p className="text-base lg:text-lg text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               At Ivy Herbals, we go beyond manufacturing, we become a long-term partner in your brand's growth journey.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -300,7 +300,7 @@ export default function Cosmo3pAboutPage() {
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
                     <div>
                       <h3 className="text-sm lg:text-base font-bold mb-2 font-primary" style={{ color: primary }}>{item.title}</h3>
-                      <p className="text-xs lg:text-sm text-text-body/70 leading-relaxed text-justify">{item.description}</p>
+                      <p className="text-xs lg:text-sm text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">{item.description}</p>
                     </div>
                   </div>
                 </motion.div>
@@ -324,7 +324,7 @@ export default function Cosmo3pAboutPage() {
               <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
                 Ready to Build Your Cosmetic Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Explore our diverse cosmetic manufacturing capabilities and understand how we transform ideas into shelf-ready products.
               </p>
               
@@ -353,12 +353,12 @@ export default function Cosmo3pAboutPage() {
                   <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
                   <span>View Our 4-Step Third-Party Manufacturing Process</span>
                 </Link>
-                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7 text-justify">
+                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   Understand how we take your product from concept to formulation, packaging, production, and delivery.
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
+              <p className="text-lg lg:text-xl font-bold italic font-primary leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
                 Your Brand. Our R&D Expertise. One Seamless Manufacturing Journey.
               </p>
             </motion.div>

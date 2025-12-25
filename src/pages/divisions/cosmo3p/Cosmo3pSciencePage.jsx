@@ -57,13 +57,13 @@ export default function Cosmo3pSciencePage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 At Ivy Herbals, Research & Development is the backbone of our cosmetic manufacturing excellence. Our in-house R&D team blends Ayurvedic wisdom, herbal actives, and modern cosmetic science to create formulations that are safe, effective, stable, and market-ready.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 We work closely with brands to develop products that align with current beauty trends, regulatory compliance, and consumer expectations, ensuring every formulation performs consistently across batches and scales seamlessly from pilot to commercial production.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 leading-relaxed text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 From concept ideation to final approval, our R&D process is designed to support innovation without compromise.
               </p>
             </motion.div>
@@ -97,7 +97,7 @@ export default function Cosmo3pSciencePage() {
                     <h3 className="text-base lg:text-lg font-bold mb-3" style={{ color: primary }}>
                       {item.title}
                     </h3>
-                    <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">
+                    <p className="text-sm lg:text-base text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {item.description}
                     </p>
                   </motion.div>
@@ -115,7 +115,7 @@ export default function Cosmo3pSciencePage() {
             <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-center" style={{ color: primary }}>
               Supporting Your Brand at Every Stage
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-6 text-justify">
+            <p className="text-base lg:text-lg text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Whether you are launching your first cosmetic product or expanding an existing portfolio, our R&D team ensures:
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -137,7 +137,7 @@ export default function Cosmo3pSciencePage() {
                 >
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-                    <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{point}</p>
+                    <p className="text-sm lg:text-base text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">{point}</p>
                   </div>
                 </motion.div>
               ))}
@@ -160,7 +160,7 @@ export default function Cosmo3pSciencePage() {
               <h2 className="text-h2 mb-4 text-center font-primary" style={{ color: primary }}>
                 Ready to Build Your Cosmetic Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Explore our diverse cosmetic manufacturing capabilities and understand how we transform ideas into shelf-ready products.
               </p>
               
@@ -173,7 +173,7 @@ export default function Cosmo3pSciencePage() {
                   <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
                   <span>Explore Product Categories</span>
                 </Link>
-                <p className="text-sm lg:text-base text-text-body/70 ml-7 text-justify">
+                <p className="text-sm lg:text-base text-text-body/70 ml-7 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   Discover skincare, haircare, body care, baby care, men's grooming & specialized cosmetic ranges.
                 </p>
               </div>
@@ -187,12 +187,12 @@ export default function Cosmo3pSciencePage() {
                   <ArrowRight className="w-4 h-4 lg:w-5 lg:h-5" />
                   <span>View Our 4-Step Third-Party Manufacturing Process</span>
                 </Link>
-                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7 text-justify">
+                <p className="text-sm lg:text-base text-text-body/70 mt-2 ml-7 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   Understand how we take your product from concept to formulation, packaging, production, and delivery.
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
+              <p className="text-lg lg:text-xl font-bold italic font-primary leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
                 Your Brand. Our R&D Expertise. One Seamless Manufacturing Journey.
               </p>
             </motion.div>

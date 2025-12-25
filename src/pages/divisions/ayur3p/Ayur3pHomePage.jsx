@@ -37,16 +37,16 @@ export default function Ayur3pHomePage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   At Ivy Herbals, we unite the timeless science of Ayurveda with the precision of modern pharmaceutical manufacturing.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   With decades of expertise and a commitment to excellence, we've become a trusted partner for private labeling, customized formulations, and complete product development solutions.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   From concept to creation, we help Ayurvedic brands transform ideas into impactful wellness products that resonate with today's lifestyle and values.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   Our state-of-the-art facility operates under globally recognized certifications, ensuring purity, consistency, and compliance at every stage.
                 </p>
               </motion.div>
@@ -139,7 +139,7 @@ export default function Ayur3pHomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-lg text-text-body/70 leading-relaxed text-justify">
+              <p className="text-lg text-text-body/70 leading-loose px-4 md:px-6 text-left lg:px-0">
                 All sections operate under independent quality monitoring and a unified supply chain, guaranteeing standardized quality and on-time delivery.
               </p>
             </motion.div>
@@ -158,10 +158,10 @@ export default function Ayur3pHomePage() {
               className="text-center mb-12"
             >
               <h2 className="text-h1 lg:text-5xl font-primary mb-6" style={{ color: primary }}>Facility Overview Video</h2>
-              <p className="text-lg text-text-body/70 max-w-3xl mx-auto text-justify">
+              <p className="text-lg text-text-body/70 max-w-3xl mx-auto leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
               </p>
-              <p className="text-base text-text-body/60 mt-2 text-justify">
+              <p className="text-base text-text-body/60 mt-2 text-center">
                 Build trust & show scale and hygiene.
               </p>
             </motion.div>

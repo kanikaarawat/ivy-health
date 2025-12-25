@@ -78,7 +78,7 @@ export default function Cosmo3pProductsPage() {
           style={{ backgroundColor: `${primary}0d` }}
         >
           <CheckCircle className="w-5 h-5 flex-shrink-0 mt-1" style={{ color: primary }} />
-          <p className="text-sm lg:text-base text-text-body/80 leading-relaxed text-justify">{item}</p>
+          <p className="text-sm lg:text-base text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">{item}</p>
         </motion.div>
       ))}
     </div>
@@ -94,7 +94,7 @@ export default function Cosmo3pProductsPage() {
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
+          <p className="text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
             At Ivy Herbals, we offer a wide spectrum of cosmetic product categories designed to serve
             mass, premium, dermatology-inspired, and ayurvedic beauty brands. Each category is
             developed with a focus on safety, efficacy, sensory appeal, and regulatory compliance,
@@ -119,7 +119,7 @@ export default function Cosmo3pProductsPage() {
             <p className="text-base lg:text-lg text-text-body/80 mb-2 font-semibold">
               Advanced Skincare Powered by Nature &amp; Science
             </p>
-            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Our skincare formulations combine herbal actives with modern cosmetic technology to
               deliver visible results while remaining gentle on the skin.
             </p>
@@ -141,7 +141,7 @@ export default function Cosmo3pProductsPage() {
             <p className="text-base lg:text-lg text-text-body/80 mb-2 font-semibold">
               Nourishment, Strength &amp; Scalp Wellness
             </p>
-            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Our hair care range is designed to support scalp health and hair vitality using
               time-tested herbs and modern conditioning systems.
             </p>
@@ -166,7 +166,7 @@ export default function Cosmo3pProductsPage() {
             <p className="text-base lg:text-lg text-text-body/80 mb-2 font-semibold">
               Everyday Luxury for Skin Wellness
             </p>
-            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               We manufacture body care products that balance indulgent textures with functional skin
               benefits.
             </p>
@@ -188,7 +188,7 @@ export default function Cosmo3pProductsPage() {
             <p className="text-base lg:text-lg text-text-body/80 mb-2 font-semibold">
               Targeted Solutions for Specific Needs
             </p>
-            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Designed for niche markets and focused skincare requirements.
             </p>
             {renderListCards(specialisedItems)}
@@ -212,7 +212,7 @@ export default function Cosmo3pProductsPage() {
             <p className="text-base lg:text-lg text-text-body/80 mb-2 font-semibold">
               Future-Ready Beauty Categories
             </p>
-            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
               We help brands stay ahead of market trends with innovative and consumer-preferred
               segments.
             </p>
@@ -227,7 +227,7 @@ export default function Cosmo3pProductsPage() {
           <h2 className="text-h2 font-primary mb-4" style={{ color: primary }}>
             Built for Your Brand
           </h2>
-          <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+          <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
             All product categories can be:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto mb-4">
@@ -273,7 +273,7 @@ export default function Cosmo3pProductsPage() {
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
               Ready to Build Your Cosmetic Line?
             </h2>
-            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+            <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Explore our diverse cosmetic manufacturing capabilities and understand how we
               transform ideas into shelf-ready products.
             </p>
@@ -289,7 +289,7 @@ export default function Cosmo3pProductsPage() {
               </Link>
             </div>
 
-            <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
+            <p className="text-lg lg:text-xl font-bold italic font-primary leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
               Your Brand. Our R&D Expertise. One Seamless Manufacturing Journey.
             </p>
           </motion.div>

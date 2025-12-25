@@ -77,12 +77,12 @@ export default function Feed3pProcessPage() {
                         <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                           Step {step.number}: {step.title}
                         </h3>
-                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base text-justify">
+                        <p className="text-text-body/80 mb-2 leading-relaxed text-sm lg:text-base leading-loose px-4 md:px-6 lg:px-0 text-left">
                           {step.description}
                         </p>
                         <p className="text-text-body/70 text-xs lg:text-sm flex items-start gap-2">
                           <ArrowRight className="w-3 h-3 lg:w-4 lg:h-4 mt-1 flex-shrink-0" style={{ color: primary }} />
-                          <span className="text-justify">{step.guidance}</span>
+                          <span className="leading-loose px-4 md:px-6 lg:px-0 text-left">{step.guidance}</span>
                         </p>
                       </div>
                     </motion.div>
@@ -112,7 +112,7 @@ export default function Feed3pProcessPage() {
                   <h3 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                     {process.bonus.title}
                   </h3>
-                  <p className="text-text-body/80 text-sm lg:text-base text-justify">
+                  <p className="text-text-body/80 text-sm lg:text-base leading-loose px-4 md:px-6 lg:px-0 text-left">
                     {process.bonus.description}
                   </p>
                 </div>
@@ -136,7 +136,7 @@ export default function Feed3pProcessPage() {
               <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
                 Ready to Build Your Animal Nutrition Line?
               </h2>
-              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-relaxed text-justify">
+              <p className="text-base lg:text-lg text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities for feed supplements and veterinary nutrition, where nutrition science, herbal actives, and performance-driven formulations come together to deliver farm-ready, scalable products.
               </p>
               
@@ -162,7 +162,7 @@ True
                 </p>
               </div>
 
-              <p className="text-lg lg:text-xl font-bold italic font-primary text-justify" style={{ color: primary }}>
+              <p className="text-lg lg:text-xl font-bold italic font-primary leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
                 Your Brand. Our Nutritional Expertise. One Trusted Manufacturing Journey.
               </p>
             </motion.div>
@@ -177,15 +177,15 @@ True
             <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
               MOQ & Timelines
             </h2>
-            <p className="text-sm lg:text-base text-text-body/80 mb-4 leading-relaxed text-justify">
+            <p className="text-sm lg:text-base text-text-body/80 mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
               Our Minimum Order Quantities (MOQs) and production timelines are designed to provide flexibility while maintaining quality precision.
             </p>
             <div className="p-6 lg:p-8 rounded-2xl"
               style={{ background: `linear-gradient(to bottom right, ${primary}0d, ${secondary}0d)`, borderColor: `${primary}1a`, borderWidth: '2px' }}>
-              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-relaxed text-justify">
+              <p className="text-sm lg:text-base text-text-body/70 mb-3 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Both MOQ and delivery schedules may vary based on custom formulation requirements, ingredient sourcing, and packaging selection.
               </p>
-              <p className="text-sm lg:text-base text-text-body/70 leading-relaxed text-justify">
+              <p className="text-sm lg:text-base text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Lead times are indicative and may adjust slightly based on the uniqueness of your product and chosen packaging materials.
               </p>
             </div>
@@ -201,10 +201,10 @@ True
               <h2 className="text-h2 font-primary mb-3" style={{ color: primary }}>
                 Packaging Excellence
               </h2>
-              <p className="text-lg lg:text-xl text-text-body/80 italic mb-1 text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-1 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 We don't just manufacture products.
               </p>
-              <p className="text-lg lg:text-xl text-text-body/80 italic mb-4 text-justify">
+              <p className="text-lg lg:text-xl text-text-body/80 italic mb-4 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 we package your identity.
               </p>
             </div>
@@ -232,7 +232,7 @@ True
                   </motion.div>
                 ))}
               </div>
-              <p className="text-text-body/70 text-sm lg:text-base italic text-justify">
+              <p className="text-text-body/70 text-sm lg:text-base italic leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Aesthetic, durable, and farm-friendly.
               </p>
             </div>
@@ -267,7 +267,7 @@ True
                       <h3 className="font-bold text-base lg:text-lg mb-2 font-primary" style={{ color: primary }}>
                         {faq.question}
                       </h3>
-                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base text-justify">
+                      <p className="text-text-body/70 leading-relaxed text-sm lg:text-base leading-loose px-4 md:px-6 lg:px-0 text-left">
                         {faq.answer}
                       </p>
                     </div>

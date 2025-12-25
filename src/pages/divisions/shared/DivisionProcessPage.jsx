@@ -51,12 +51,12 @@ export default function DivisionProcessPage({ division }) {
                     <h3 className="text-h2 font-primary mb-3" style={{ color: primary }}>
                       Step {step.number}: {step.title}
                     </h3>
-                    <p className="text-text-body/80 mb-2 leading-relaxed text-justify">
+                    <p className="text-text-body/80 mb-2 leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {step.description}
                     </p>
                     <p className="text-text-body/70 text-sm flex items-start gap-2">
                       <ArrowRight className="w-4 h-4 text-accent mt-1 flex-shrink-0" />
-                      <span className="text-justify">{step.guidance}</span>
+                      <span className="leading-loose px-4 md:px-6 lg:px-0 text-left">{step.guidance}</span>
                     </p>
                   </div>
                 </motion.div>
@@ -79,7 +79,7 @@ export default function DivisionProcessPage({ division }) {
                 {process.bonus.title}
               </h3>
             </div>
-            <p className="text-text-body/80 text-lg text-justify">
+            <p className="text-text-body/80 text-lg leading-loose px-4 md:px-6 lg:px-0 text-left">
               {process.bonus.description}
             </p>
           </motion.div>
@@ -92,11 +92,11 @@ export default function DivisionProcessPage({ division }) {
           <h2 className="font-serif text-4xl font-bold text-primary mb-6 text-center">
             {process.moq.title}
           </h2>
-          <p className="text-xl text-text-body/80 mb-6 leading-relaxed text-justify">
+          <p className="text-xl text-text-body/80 mb-6 leading-loose px-4 md:px-6 lg:px-0 text-left">
             {process.moq.description}
           </p>
           <div className="bg-white border border-primary/20 p-6 rounded-xl">
-            <p className="text-text-body/70 italic text-justify">
+            <p className="text-text-body/70 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
               {process.moq.note}
             </p>
           </div>
@@ -110,7 +110,7 @@ export default function DivisionProcessPage({ division }) {
             <h2 className="font-serif text-4xl font-bold text-primary mb-4 text-center">
               {process.packaging.title}
             </h2>
-            <p className="text-xl text-text-body/80 italic text-justify">
+            <p className="text-xl text-text-body/80 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
               {process.packaging.subtitle}
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function DivisionProcessPage({ division }) {
               </motion.div>
             ))}
           </div>
-          <p className="text-text-body/70 italic text-justify">
+          <p className="text-text-body/70 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
             {process.packaging.description}
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function DivisionProcessPage({ division }) {
           <h2 className="font-serif text-4xl font-bold mb-6 text-center">
             Ready to Build Your {division.shortName} Line?
           </h2>
-          <p className="text-xl text-background/90 mb-8 text-justify">
+          <p className="text-xl text-background/90 mb-8 leading-loose px-4 md:px-6 lg:px-0 text-left">
             Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -152,7 +152,7 @@ export default function DivisionProcessPage({ division }) {
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
-          <p className="text-lg text-background/80 mt-8 italic text-justify">
+          <p className="text-lg text-background/80 mt-8 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
             Your Brand. Our {division.name} Expertise. One Trusted Manufacturing Journey.
           </p>
         </div>

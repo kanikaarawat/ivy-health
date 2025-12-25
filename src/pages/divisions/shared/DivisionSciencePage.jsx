@@ -23,7 +23,7 @@ export default function DivisionSciencePage({ division }) {
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
+          <p className="text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
             {science.intro}
           </p>
         </div>
@@ -54,7 +54,7 @@ export default function DivisionSciencePage({ division }) {
                 <h3 className="font-serif text-xl font-bold text-primary mb-3 text-center">
                   {item.title}
                 </h3>
-                <p className="text-text-body/70 text-sm text-center text-justify">
+                <p className="text-text-body/70 text-sm text-center leading-loose px-4 md:px-6 lg:px-0 text-left">
                   {item.description}
                 </p>
               </motion.div>
@@ -100,7 +100,7 @@ export default function DivisionSciencePage({ division }) {
           <h2 className="font-serif text-4xl font-bold mb-6 text-center">
             Ready to Build Your {division.shortName} Line?
           </h2>
-          <p className="text-xl text-background/90 mb-8 text-justify">
+          <p className="text-xl text-background/90 mb-8 leading-loose px-4 md:px-6 lg:px-0 text-left">
             Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -117,7 +117,7 @@ export default function DivisionSciencePage({ division }) {
               View Manufacturing Process
             </Link>
           </div>
-          <p className="text-lg text-background/80 mt-8 italic text-justify">
+          <p className="text-lg text-background/80 mt-8 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
             Your Brand. Our {division.name} Expertise. One Trusted Manufacturing Journey.
           </p>
         </div>

@@ -37,10 +37,10 @@ export default function Feed3pHomePage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   At Ivy Herbals, we combine scientific formulation with on-ground farming insight to deliver high-quality, reliable animal feed Supplements.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   With decades of manufacturing experience and a team of nutritionists and veterinarians, we partner with emerging and established brands for private labeling, custom formulations, and end-to-end production support.
                 </p>
               </motion.div>
@@ -133,7 +133,7 @@ export default function Feed3pHomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-lg text-text-body/70 leading-relaxed text-justify">
+              <p className="text-lg text-text-body/70 leading-loose px-4 md:px-6 text-left lg:px-0">
                 All sections function under independent QA supervision and an integrated supply chain ensuring purity, consistency, and on-time dispatch.
               </p>
             </motion.div>
@@ -152,10 +152,10 @@ export default function Feed3pHomePage() {
               className="text-center mb-12"
             >
               <h2 className="text-h1 lg:text-5xl font-primary mb-6" style={{ color: primary }}>Facility Overview Video</h2>
-              <p className="text-lg text-text-body/70 max-w-3xl mx-auto text-justify">
+              <p className="text-lg text-text-body/70 max-w-3xl mx-auto leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
               </p>
-              <p className="text-base text-text-body/60 mt-2 text-justify">
+              <p className="text-base text-text-body/60 mt-2 text-center">
                 Build trust & show scale and hygiene.
               </p>
             </motion.div>

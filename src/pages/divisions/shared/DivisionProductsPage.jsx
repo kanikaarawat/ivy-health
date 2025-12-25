@@ -75,7 +75,7 @@ export default function DivisionProductsPage({ division }) {
       {/* Intro */}
       <AnimatedSection className="bg-white">
         <div className="max-w-4xl mx-auto">
-          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
+          <p className="text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
             At Ivy Herbals, we offer a wide range of science-backed, compliant product categories designed to support your brand's needs. Each category is developed with authenticated ingredients, process-controlled manufacturing, ensuring safety, efficacy, and scalability.
           </p>
         </div>
@@ -107,7 +107,7 @@ export default function DivisionProductsPage({ division }) {
                     </h3>
                   </div>
                   {category.description && (
-                    <p className="text-text-body/70 text-sm leading-relaxed text-justify">
+                    <p className="text-text-body/70 text-sm leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {category.description}
                     </p>
                   )}
@@ -130,7 +130,7 @@ export default function DivisionProductsPage({ division }) {
                     {category.title}
                   </h2>
                   {category.description && (
-                    <p className="text-text-body/70 mb-6 italic text-justify">
+                    <p className="text-text-body/70 mb-6 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {category.description}
                     </p>
                   )}
@@ -151,7 +151,7 @@ export default function DivisionProductsPage({ division }) {
                           <div>
                             <span className="text-text-body text-sm font-medium block">{typeof item === 'string' ? item : item.name}</span>
                             {typeof item === 'object' && item.description && (
-                              <span className="text-text-body/60 text-xs block mt-1 text-justify">{item.description}</span>
+                              <span className="text-text-body/60 text-xs block mt-1 leading-loose px-4 md:px-6 lg:px-0 text-left">{item.description}</span>
                             )}
                           </div>
                         </motion.div>
@@ -201,7 +201,7 @@ export default function DivisionProductsPage({ division }) {
           <h2 className="font-serif text-4xl font-bold mb-6 text-center">
             Ready to Build Your {division.shortName} Line?
           </h2>
-          <p className="text-xl text-background/90 mb-8 text-justify">
+          <p className="text-xl text-background/90 mb-8 leading-loose px-4 md:px-6 lg:px-0 text-left">
             Discover Ivy Herbals' science-backed, compliance-driven third-party manufacturing capabilities.
           </p>
           <Link
@@ -212,7 +212,7 @@ export default function DivisionProductsPage({ division }) {
             <span>View Our Manufacturing Process</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
-          <p className="text-lg text-background/80 mt-8 italic text-justify">
+          <p className="text-lg text-background/80 mt-8 italic leading-loose px-4 md:px-6 lg:px-0 text-left">
             Your Brand. Our {division.name} Expertise. One Trusted Manufacturing Journey.
           </p>
         </div>

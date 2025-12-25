@@ -102,7 +102,7 @@ export default function ContactPage() {
           <h2 className="text-h2 font-primary mb-6 text-center" style={{ color: primary }}>
             {contactPage.intro.title}
           </h2>
-          <p className="text-xl text-text-body/80 leading-relaxed text-justify">
+          <p className="text-xl text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
             {contactPage.intro.body}
           </p>
         </div>
@@ -459,7 +459,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1" style={{ color: primary }}>Address</h4>
-                    <p className="text-text-body/70 text-justify">
+                    <p className="text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {contactPage.info.address}
                     </p>
                   </div>
@@ -471,7 +471,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-medium mb-1" style={{ color: primary }}>Hours</h4>
-                    <p className="text-text-body/70 text-justify">
+                    <p className="text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">
                       {contactPage.info.hours}
                     </p>
                   </div>
@@ -488,7 +488,7 @@ export default function ContactPage() {
               <h4 className="text-h3 font-primary mb-2" style={{ color: primary }}>
                 Visit Our Facility
               </h4>
-              <p className="text-text-body/70 text-justify">
+              <p className="text-text-body/70 leading-loose px-4 md:px-6 lg:px-0 text-left">
                 We welcome visits to our GMP-certified facility. Please schedule an appointment.
               </p>
             </div>
@@ -502,7 +502,7 @@ export default function ContactPage() {
           <h2 className="text-h2 font-primary mb-4 text-center" style={{ color: primary }}>
             Division-Specific Contacts
           </h2>
-          <p className="text-xl text-text-body/80 mb-12 text-justify">
+          <p className="text-xl text-text-body/80 mb-12 leading-loose px-4 md:px-6 lg:px-0 text-left">
             For inquiries about specific product divisions, reach out directly to our specialized teams
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

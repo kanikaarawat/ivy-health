@@ -37,16 +37,16 @@ export default function Cosmo3pHomePage() {
                 viewport={{ once: true }}
                 className="space-y-6"
               >
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   At Ivy Herbals, we unite Ayurveda, herbal science, and modern cosmetic innovation to create products that celebrate natural beauty and skin wellness.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   We specialize in private labeling, custom formulations, and end-to-end skincare manufacturing for both emerging and premium beauty brands.
                 </p>
-                <p className="text-lg text-text-body/80 leading-relaxed text-justify">
+                <p className="text-lg text-text-body/80 leading-loose px-4 md:px-6 lg:px-0 text-left">
                   From herbal actives to final packaging, every stage at Ivy Herbals is guided by efficacy, safety, and aesthetics.
                 </p>
-                <p className="text-lg font-semibold leading-relaxed text-justify" style={{ color: primary }}>
+                <p className="text-lg font-semibold leading-loose px-4 md:px-6 lg:px-0 text-left" style={{ color: primary }}>
                   Pure, Sustainable, and Dermatologically Tested — Every Time.
                 </p>
               </motion.div>
@@ -139,7 +139,7 @@ export default function Cosmo3pHomePage() {
                   </li>
                 ))}
               </ul>
-              <p className="text-lg text-text-body/70 leading-relaxed text-justify">
+              <p className="text-lg text-text-body/70 leading-loose px-4 md:px-6 text-left lg:px-0">
                 All units are designed to maintain formula integrity, aesthetic consistency, and product stability.
               </p>
             </motion.div>
@@ -158,10 +158,10 @@ export default function Cosmo3pHomePage() {
               className="text-center mb-12"
             >
               <h2 className="text-h1 lg:text-5xl font-primary mb-6" style={{ color: primary }}>Facility Overview Video</h2>
-              <p className="text-lg text-text-body/70 max-w-3xl mx-auto text-justify">
+              <p className="text-lg text-text-body/70 max-w-3xl mx-auto leading-loose px-4 md:px-6 lg:px-0 text-left">
                 Walkthrough of manufacturing area, mixing tanks, filling lines, and packaging.
               </p>
-              <p className="text-base text-text-body/60 mt-2 text-justify">
+              <p className="text-base text-text-body/60 mt-2 text-center">
                 Build trust & show scale and hygiene.
               </p>
             </motion.div>
